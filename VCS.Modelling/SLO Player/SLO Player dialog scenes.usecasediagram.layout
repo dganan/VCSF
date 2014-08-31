@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="SLO Player dialog scenes">
+  <useCaseModelRootMoniker Id="b285ff57-4a99-4f74-907f-a63840b09c39" />
+  <nestedChildShapes>
+    <useCaseShape Id="6826d87c-db75-421b-b9b9-e0959e9936d5" absoluteBounds="4, 1.375, 1.75, 0.625" customColor="PeachPuff" heightOffset="0">
+      <useCaseMoniker Id="4c2a878a-2e74-4c19-8e61-ed6b885d729e" LastKnownName="Play dialog scene" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseShape Id="b766a4cd-64d7-4606-82c9-f338e4dd5eea" absoluteBounds="6.875, 1.375, 1.75, 0.625" customColor="PeachPuff" heightOffset="0">
+      <useCaseMoniker Id="dd9c398b-767b-4e09-a8fd-140cdfb573f3" LastKnownName="Play dialog scene part" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <includeConnector edgePoints="[(5.75 : 1.6875); (6.875 : 1.6875)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«include»">
+      <includeMoniker Id="4cffa07a-e63f-4dbd-9117-d5a51c20bc56" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="6826d87c-db75-421b-b9b9-e0959e9936d5" />
+        <useCaseShapeMoniker Id="b766a4cd-64d7-4606-82c9-f338e4dd5eea" />
+      </nodes>
+    </includeConnector>
+  </nestedChildShapes>
+</useCaseDiagram>

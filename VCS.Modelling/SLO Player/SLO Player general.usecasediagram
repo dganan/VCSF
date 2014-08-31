@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="2bcce393-b4df-4378-b1f4-9690dc0c215c" name="SLO-v" linkedPackageId="16c1193c-8880-4ad0-abe6-a91e8a1ce9f3" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="96125542-5f34-4b66-9dcd-413e2c0300f7" name="User" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a7cb9d33-de9d-44f1-8af0-37f2c7031c16" />
+        <targetEnds>
+          <association Id="61d08a35-38ae-4526-bd1f-7684263231c8" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Play storyboard" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="eb0a29ab-68d4-4cb6-8690-72c6fbe4af87" LastKnownName="Play storyboard" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cb9445ca-ab68-4b02-a115-f248c9eb7b64" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6b7c389d-92b2-453b-a4cf-21de1a47d244" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5c85b611-b9bf-4fae-a602-5a964597a69a" name="Play storyboard" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f290f23f-32f5-47f6-ab44-75c011235234" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1e64b1b6-28e4-4b01-92b2-bf00015e1e65" />
+          </association>
+          <association Id="16b1a033-21a8-46ee-b0e5-0b7d06d4a051" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Show available SLOs" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="36243b6c-09b6-42be-8f05-5e5ed55ba976" LastKnownName="Show available SLOs" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6ffac36b-f23c-4ccb-84a5-6fe8061b2916" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9d5fd323-9dd3-44bb-ab56-eb5fd592eba4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0009da73-dd02-4728-be71-6716993cbbee" name="Show available SLOs" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c8601a6f-181b-4b1d-a524-cdc5640b8beb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0e9c654a-138d-4470-a0de-d94acd70d79f" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="eb0a29ab-68d4-4cb6-8690-72c6fbe4af87" name="Play storyboard" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3ec0a7fd-e506-481e-91cf-1e67a4e1efcb" />
+        <additions>
+          <include Id="193a9944-4025-4ca2-81c8-3c0352f82e58">
+            <useCaseMoniker Id="d32bb792-fdb8-45d7-bb7d-2b8e69266df6" LastKnownName="Play scene" />
+            <elementDefinition Id="38640880-5573-4709-a883-53ffd25c095b" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d32bb792-fdb8-45d7-bb7d-2b8e69266df6" name="Play scene" isAbstract="true" isLeaf="false">
+        <elementDefinition Id="7d545ca0-5aec-4a11-b140-c06c07a96583" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="a23afaec-2b6a-451a-980b-0450406d4fa6" name="Play assessment scene" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="fbabcd5b-5710-4932-9316-9f3ebc17f176" />
+        <generalsInternal>
+          <generalization Id="24f7d56c-c24e-4c4c-9da8-f4f9e7a63d38" isSubstitutable="false">
+            <useCaseMoniker Id="d32bb792-fdb8-45d7-bb7d-2b8e69266df6" LastKnownName="Play scene" />
+            <elementDefinition Id="8a3b1e5d-f808-476d-8457-8d59a907f05b" />
+          </generalization>
+        </generalsInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="76142122-f218-4ccb-8352-3ccbb6098da5" name="Play dialog scene" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="841e3580-d2be-45c5-a325-a904999550d1" />
+        <generalsInternal>
+          <generalization Id="8c6b8f48-bc1f-4f9b-b394-c1ca14151d07" isSubstitutable="false">
+            <useCaseMoniker Id="d32bb792-fdb8-45d7-bb7d-2b8e69266df6" LastKnownName="Play scene" />
+            <elementDefinition Id="afea046e-3362-44e3-986a-9351c3320721" />
+          </generalization>
+        </generalsInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="36243b6c-09b6-42be-8f05-5e5ed55ba976" name="Show available SLOs" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="76836806-9f05-44be-b960-f9c0ba2bae2b" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="16c1193c-8880-4ad0-abe6-a91e8a1ce9f3" name="VCS.Modelling">
+    <elementDefinition Id="3026f59e-7806-4361-9908-c778219bdf5e" />
+    <profileInstances>
+      <packageHasProfileInstances Id="5900d80c-0675-49b6-a606-29ee99393ef1">
+        <profileInstance Id="ceb89817-7583-4098-8112-fb1b9126e2b3" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="e72dbb73-9fc8-4b55-9eab-f4d2650e90da">
+        <profileInstance Id="42f496ae-aa9c-45b3-9648-ced31e191c6f" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

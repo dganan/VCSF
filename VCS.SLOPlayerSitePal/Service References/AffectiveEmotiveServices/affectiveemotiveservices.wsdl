@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetLastUserEmotionalState">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idUser" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idCourse" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLastUserEmotionalStateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLastUserEmotionalStateResult" type="tns:EmotionalStateValue" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="EmotionalStateValue">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="FidAns" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="IntDis" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="EccInd" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="AutFru" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetLastUserEmotionalStateWithoutIdCourse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idUser" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLastUserEmotionalStateWithoutIdCourseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLastUserEmotionalStateWithoutIdCourseResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetUserEmotionalState">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idUser" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idCourse" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="value" type="tns:EmotionalStateValue" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetUserEmotionalStateResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SetUserEmotionalStateWithTestType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idUser" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idCourse" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="value" type="tns:EmotionalStateValue" />
+            <s:element minOccurs="1" maxOccurs="1" name="testType" type="tns:TESTTYPE" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="TESTTYPE">
+        <s:restriction base="s:string">
+          <s:enumeration value="PREQUANTIFICATION" />
+          <s:enumeration value="QUANTIFICATION" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="SetUserEmotionalStateWithTestTypeResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetLastUserEmotionalStateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLastUserEmotionalState" />
+  </wsdl:message>
+  <wsdl:message name="GetLastUserEmotionalStateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLastUserEmotionalStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLastUserEmotionalStateWithoutIdCourseSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLastUserEmotionalStateWithoutIdCourse" />
+  </wsdl:message>
+  <wsdl:message name="GetLastUserEmotionalStateWithoutIdCourseSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLastUserEmotionalStateWithoutIdCourseResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetUserEmotionalStateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetUserEmotionalState" />
+  </wsdl:message>
+  <wsdl:message name="SetUserEmotionalStateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetUserEmotionalStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetUserEmotionalStateWithTestTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:SetUserEmotionalStateWithTestType" />
+  </wsdl:message>
+  <wsdl:message name="SetUserEmotionalStateWithTestTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:SetUserEmotionalStateWithTestTypeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="AffectiveEmotiveServicesSoap">
+    <wsdl:operation name="GetLastUserEmotionalState">
+      <wsdl:input message="tns:GetLastUserEmotionalStateSoapIn" />
+      <wsdl:output message="tns:GetLastUserEmotionalStateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastUserEmotionalState">
+      <wsdl:input name="GetLastUserEmotionalStateWithoutIdCourse" message="tns:GetLastUserEmotionalStateWithoutIdCourseSoapIn" />
+      <wsdl:output name="GetLastUserEmotionalStateWithoutIdCourse" message="tns:GetLastUserEmotionalStateWithoutIdCourseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUserEmotionalState">
+      <wsdl:input message="tns:SetUserEmotionalStateSoapIn" />
+      <wsdl:output message="tns:SetUserEmotionalStateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUserEmotionalState">
+      <wsdl:input name="SetUserEmotionalStateWithTestType" message="tns:SetUserEmotionalStateWithTestTypeSoapIn" />
+      <wsdl:output name="SetUserEmotionalStateWithTestType" message="tns:SetUserEmotionalStateWithTestTypeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AffectiveEmotiveServicesSoap" type="tns:AffectiveEmotiveServicesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetLastUserEmotionalState">
+      <soap:operation soapAction="http://tempuri.org/GetLastUserEmotionalState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastUserEmotionalState">
+      <soap:operation soapAction="http://tempuri.org/GetLastUserEmotionalStateWithoutIdCourse" style="document" />
+      <wsdl:input name="GetLastUserEmotionalStateWithoutIdCourse">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetLastUserEmotionalStateWithoutIdCourse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUserEmotionalState">
+      <soap:operation soapAction="http://tempuri.org/SetUserEmotionalState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUserEmotionalState">
+      <soap:operation soapAction="http://tempuri.org/SetUserEmotionalStateWithTestType" style="document" />
+      <wsdl:input name="SetUserEmotionalStateWithTestType">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SetUserEmotionalStateWithTestType">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AffectiveEmotiveServicesSoap12" type="tns:AffectiveEmotiveServicesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetLastUserEmotionalState">
+      <soap12:operation soapAction="http://tempuri.org/GetLastUserEmotionalState" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastUserEmotionalState">
+      <soap12:operation soapAction="http://tempuri.org/GetLastUserEmotionalStateWithoutIdCourse" style="document" />
+      <wsdl:input name="GetLastUserEmotionalStateWithoutIdCourse">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetLastUserEmotionalStateWithoutIdCourse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUserEmotionalState">
+      <soap12:operation soapAction="http://tempuri.org/SetUserEmotionalState" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUserEmotionalState">
+      <soap12:operation soapAction="http://tempuri.org/SetUserEmotionalStateWithTestType" style="document" />
+      <wsdl:input name="SetUserEmotionalStateWithTestType">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SetUserEmotionalStateWithTestType">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AffectiveEmotiveServices">
+    <wsdl:port name="AffectiveEmotiveServicesSoap" binding="tns:AffectiveEmotiveServicesSoap">
+      <soap:address location="http://iwtalice.crmpa.unisa.it/iwt/remoteservices/externalservices/affectiveemotiveservices.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AffectiveEmotiveServicesSoap12" binding="tns:AffectiveEmotiveServicesSoap12">
+      <soap12:address location="http://iwtalice.crmpa.unisa.it/iwt/remoteservices/externalservices/affectiveemotiveservices.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

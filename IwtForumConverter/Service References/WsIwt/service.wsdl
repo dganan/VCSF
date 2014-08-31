@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://momanet.it/iwt/Forum/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://tempuri.org/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CollaborativeSessionExportService" targetNamespace="http://momanet.it/iwt/Forum/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/" location="" />
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://momanet.it/iwt/Forum/Imports">
+      <xsd:import namespace="http://momanet.it/iwt/Forum/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/VCS" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ForumSessionExport" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="CollaborativeSessionExportService_AvailableCollaborativeSessions_InputMessage">
+    <wsdl:part name="parameters" element="tns:AvailableCollaborativeSessions" />
+  </wsdl:message>
+  <wsdl:message name="CollaborativeSessionExportService_AvailableCollaborativeSessions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AvailableCollaborativeSessionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CollaborativeSessionExportService_ReadCollaborativeSessionData_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadCollaborativeSessionData" />
+  </wsdl:message>
+  <wsdl:message name="CollaborativeSessionExportService_ReadCollaborativeSessionData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadCollaborativeSessionDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="CollaborativeSessionExportService_ReadUserAccounts_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadUserAccounts" />
+  </wsdl:message>
+  <wsdl:message name="CollaborativeSessionExportService_ReadUserAccounts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadUserAccountsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CollaborativeSessionExportService_ReadPosts_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadPosts" />
+  </wsdl:message>
+  <wsdl:message name="CollaborativeSessionExportService_ReadPosts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadPostsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CollaborativeSessionExportService">
+    <wsdl:operation name="AvailableCollaborativeSessions">
+      <wsdl:input wsaw:Action="http://momanet.it/iwt/Forum/CollaborativeSessionExportService/AvailableCollaborativeSessions" message="tns:CollaborativeSessionExportService_AvailableCollaborativeSessions_InputMessage" />
+      <wsdl:output wsaw:Action="http://momanet.it/iwt/Forum/CollaborativeSessionExportService/AvailableCollaborativeSessionsResponse" message="tns:CollaborativeSessionExportService_AvailableCollaborativeSessions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadCollaborativeSessionData">
+      <wsdl:input wsaw:Action="http://momanet.it/iwt/Forum/CollaborativeSessionExportService/ReadCollaborativeSessionData" message="tns:CollaborativeSessionExportService_ReadCollaborativeSessionData_InputMessage" />
+      <wsdl:output wsaw:Action="http://momanet.it/iwt/Forum/CollaborativeSessionExportService/ReadCollaborativeSessionDataResponse" message="tns:CollaborativeSessionExportService_ReadCollaborativeSessionData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadUserAccounts">
+      <wsdl:input wsaw:Action="http://momanet.it/iwt/Forum/CollaborativeSessionExportService/ReadUserAccounts" message="tns:CollaborativeSessionExportService_ReadUserAccounts_InputMessage" />
+      <wsdl:output wsaw:Action="http://momanet.it/iwt/Forum/CollaborativeSessionExportService/ReadUserAccountsResponse" message="tns:CollaborativeSessionExportService_ReadUserAccounts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadPosts">
+      <wsdl:input wsaw:Action="http://momanet.it/iwt/Forum/CollaborativeSessionExportService/ReadPosts" message="tns:CollaborativeSessionExportService_ReadPosts_InputMessage" />
+      <wsdl:output wsaw:Action="http://momanet.it/iwt/Forum/CollaborativeSessionExportService/ReadPostsResponse" message="tns:CollaborativeSessionExportService_ReadPosts_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="CollaborativeSessionExportService">
+    <wsdl:port name="BasicHttpBinding_CollaborativeSessionExportService" binding="i0:BasicHttpBinding_CollaborativeSessionExportService">
+      <soap:address location="http://iwtalice/IWT30Adv_Kforum/wsforumexport/Export.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

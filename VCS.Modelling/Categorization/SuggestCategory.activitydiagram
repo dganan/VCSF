@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="ccb13bb0-a374-46bb-88c9-273254434edb" name="SuggestCategory" linkedPackageId="0a0e9662-5110-44b0-98f0-882f3cd03402" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="020afdd3-a707-47e8-985b-cfc3be25dedc">
+      <profileInstance Id="5bdab079-18f4-4224-a595-3df003de1d78" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="467d94ec-3c81-440f-8210-29d10cad95ff">
+      <profileInstance Id="c0c3435b-7daf-44e8-b23d-d26397cd3ce6" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="c353b245-ad51-42d8-84b7-43973f919bdc" name="SuggestCategory" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="c312b70c-96a6-4267-babb-48b25018ab81" />
+        <nodes>
+          <initialNode Id="7fa32a8e-dc95-42a1-8abf-19213d8fdfbd" name="Initial1" isLeaf="false">
+            <elementDefinition Id="cfbb66f2-ab33-4bcc-80d2-5d16f49f88dd" />
+            <flowNodeTargets>
+              <controlFlow Id="cf0d55d0-9de8-4b6d-aded-1b1dc3e68201" isLeaf="false">
+                <opaqueActionMoniker Id="9b2b1c33-8f8e-4483-b8c9-c0bdab8711f5" LastKnownName="Deserialize classifier" />
+                <elementDefinition Id="25eb7fb5-136c-4450-89a3-f0c11e6205e6" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <activityFinalNode Id="d782ba45-c4bc-4e22-999d-b8a5a784ff7c" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="fc85ac22-69c5-42eb-9716-7e9604dbdeaa" />
+          </activityFinalNode>
+          <opaqueAction Id="9b2b1c33-8f8e-4483-b8c9-c0bdab8711f5" name="Deserialize classifier" isLeaf="false">
+            <elementDefinition Id="0a902c82-e741-43a4-a5da-e638eaa908d0" />
+            <flowNodeTargets>
+              <controlFlow Id="812f450b-08a0-4a48-a9b2-6cdd713423ec" isLeaf="false">
+                <opaqueActionMoniker Id="1638a1cd-f294-477e-916f-e3a553405964" LastKnownName="Classify given text" />
+                <elementDefinition Id="21ce6b1f-7c44-4599-99c3-398140925909" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="1638a1cd-f294-477e-916f-e3a553405964" name="Classify given text" isLeaf="false">
+            <elementDefinition Id="520f7daa-b0b2-4964-a7fe-db567ca4b9ce" />
+            <flowNodeTargets>
+              <controlFlow Id="cb9c9a27-0c9a-4d07-9b3a-76ea089fcb8b" isLeaf="false">
+                <activityFinalNodeMoniker Id="d782ba45-c4bc-4e22-999d-b8a5a784ff7c" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="94a9048b-5543-4edf-b78f-c289ce51918b" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="0a0e9662-5110-44b0-98f0-882f3cd03402" name="VCS.Modelling">
+    <elementDefinition Id="3026f59e-7806-4361-9908-c778219bdf5e" />
+  </package>
+</activityRootModel>

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="VCS.Category" Collapsed="true">
+    <Position X="9" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Category.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VCS.CollaborativeSession" Collapsed="true">
+    <Position X="3.5" Y="2.5" Width="1.75" />
+    <AssociationLine Name="UserAccounts" Type="VCS.UserAccount" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.938" Y="3.191" />
+        <Point X="4.938" Y="4.096" />
+        <Point X="6.25" Y="4.096" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAggAAABAAAAAQIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CollaborativeSession.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Site" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Posts" />
+      <Property Name="UserAccounts" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="VCS.Post" Collapsed="true">
+    <Position X="6.25" Y="2.5" Width="1.5" />
+    <AssociationLine Name="Replies" Type="VCS.Post" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.562" Y="2.5" />
+        <Point X="6.562" Y="1.964" />
+        <Point X="7.438" Y="1.964" />
+        <Point X="7.438" Y="2.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.11" Y="0.652" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAgAAAAAAAAAAAEAAAAAAEAAAEAAAAAAIAAA=</HashCode>
+      <FileName>Post.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Creator" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Replies" />
+      <Property Name="Categories" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="VCS.Site" Collapsed="true">
+    <Position X="3" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Site.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VCS.UserAccount" Collapsed="true">
+    <Position X="6.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAEAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UserAccount.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Role" />
+    </ShowAsAssociation>
+  </Class>
+  <Enum Name="VCS.Role" Collapsed="true">
+    <Position X="9" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Role.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,26 @@
+﻿<local:ScenePlayer x:Class="VCS.AssessmentScenePlayer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Toolkit"
+    xmlns:local="clr-namespace:VCS"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+    <toolkit:DockPanel LastChildFill="True">
+        <TextBlock toolkit:DockPanel.Dock="Top" x:Name="TitleText" FontSize="20" FontWeight="Bold" Height="25" Margin="10" HorizontalAlignment="Center" />
+        <TextBlock toolkit:DockPanel.Dock="Top" x:Name="SubTitleText" FontSize="16" FontWeight="Bold" Height="20" Margin="10" HorizontalAlignment="Center" Visibility="Collapsed" />
+        <Grid>
+            <Grid x:Name="LayoutRoot" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            </Grid>
+            <Grid Name="FeedbackPanel" Visibility="Collapsed" >
+                <StackPanel Background="White" Opacity="0.9"></StackPanel>
+                <StackPanel Width="200" Opacity="1" Background="Cornsilk" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <StackPanel Margin="10">
+                        <TextBlock Name="FeedbackText" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" />
+                        <Button Width="100" Click="FeedbackButton_Click" Margin="10">OK</Button>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </toolkit:DockPanel></local:ScenePlayer>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CollaborativeSession>
+  <Users>
+    <User Id="user1" Name="User1" Email="user1@uoc.edu" Role="Teacher" ></User>
+    <User Id="user2" Name="User2" Email="user2@uoc.edu" Role="Student" ></User>
+    <User Id="user3" Name="User3" Email="user3@uoc.edu" Role="Student" ></User>
+    <User Id="user4" Name="User4" Email="user4@uoc.edu" Role="Student" ></User>
+  </Users>
+  <Forum Id="forum0" Name="Forum 0" Description="">
+    <Site Id="site0" Name="Site 0"></Site>
+    <Categories>
+      <Category Id="category0" Name="Category 0" />
+    </Categories>
+    <Posts>
+      <Post Id="post1" CreatorId="user1" CreationDate="01/04/2011" Content="Hola">
+        <Category Id="category0" />
+        <Reply Id="post2" />
+      </Post>
+      <Post Id="post2" CreatorId="user1" CreationDate="02/04/2011" Content="Hola!" />
+    </Posts>
+  </Forum>
+</CollaborativeSession>

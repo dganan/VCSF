@@ -1,0 +1,46 @@
+﻿<configuration>
+  <system.serviceModel>
+    <bindings>
+      <basicHttpBinding>
+        <binding name="BasicHttpBinding_ISpeechService" maxBufferSize="2147483647"
+          maxReceivedMessageSize="2147483647">
+          <security mode="None" />
+        </binding>
+        <binding name="BasicHttpBinding_IActivityLogService" maxBufferSize="2147483647"
+          maxReceivedMessageSize="2147483647">
+          <security mode="None" />
+        </binding>
+        <binding name="BasicHttpBinding_ISLORepositoryService" maxBufferSize="2147483647"
+          maxReceivedMessageSize="2147483647">
+          <security mode="None" />
+        </binding>
+        <binding name="AffectiveEmotiveServicesSoap" maxBufferSize="2147483647"
+          maxReceivedMessageSize="2147483647">
+          <security mode="None" />
+        </binding>
+        <binding name="LearningModelServicesSoap" maxBufferSize="2147483647"
+          maxReceivedMessageSize="2147483647">
+          <security mode="None" />
+        </binding>
+      </basicHttpBinding>
+    </bindings>
+    <client>
+      <endpoint address="http://localhost/VCS.Services/SpeechService/SpeechService.svc"
+        binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_ISpeechService"
+        contract="SpeechService.ISpeechService" name="BasicHttpBinding_ISpeechService" />
+      <endpoint address="http://localhost/VCS.Services/ActivityLogService/ActivityLogService.svc"
+        binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IActivityLogService"
+        contract="ActivityLogService.IActivityLogService" name="BasicHttpBinding_IActivityLogService" />
+      <endpoint address="http://localhost/VCS.Services/SLORepositoryService/SLORepositoryService.svc"
+        binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_ISLORepositoryService"
+        contract="SLORepositoryService.ISLORepositoryService" name="BasicHttpBinding_ISLORepositoryService" />
+      <endpoint address="http://iwtalice.crmpa.unisa.it/iwt/remoteservices/externalservices/affectiveemotiveservices.asmx"
+        binding="basicHttpBinding" bindingConfiguration="AffectiveEmotiveServicesSoap"
+        contract="AffectiveEmotiveServices.AffectiveEmotiveServicesSoap"
+        name="AffectiveEmotiveServicesSoap" />
+      <endpoint address="http://iwtalice.crmpa.unisa.it/iwt/remoteservices/externalservices/LearnerModelServices.asmx"
+        binding="basicHttpBinding" bindingConfiguration="LearningModelServicesSoap"
+        contract="LearningModelServices.LearningModelServicesSoap" name="LearningModelServicesSoap" />
+    </client>
+  </system.serviceModel>
+</configuration>

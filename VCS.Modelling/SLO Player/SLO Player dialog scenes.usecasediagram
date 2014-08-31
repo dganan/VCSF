@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="b285ff57-4a99-4f74-907f-a63840b09c39" name="SLO Player dialog scenes" linkedPackageId="be73caa5-3381-4775-9299-b97b36555472" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="9369ea7b-fa73-4f39-9c0b-ce577aac55d1">
+      <profileInstance Id="1afa453f-4b8c-4201-94a1-4117aa2c2546" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="64a5eb7d-6fc8-4a34-bbec-f6dd4e84307d">
+      <profileInstance Id="832ca13f-207a-44cb-becd-0a3e33b941fa" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <useCase Id="4c2a878a-2e74-4c19-8e61-ed6b885d729e" name="Play dialog scene" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5178a0a5-ac73-47f3-ab2a-c86dea24db08" />
+        <additions>
+          <include Id="4cffa07a-e63f-4dbd-9117-d5a51c20bc56">
+            <useCaseMoniker Id="dd9c398b-767b-4e09-a8fd-140cdfb573f3" LastKnownName="Play dialog scene part" />
+            <elementDefinition Id="6bd2e3b6-9764-46dc-89e0-7a606b1af4df" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="dd9c398b-767b-4e09-a8fd-140cdfb573f3" name="Play dialog scene part" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c21e2a82-e581-478a-8bd3-ac7d12751701" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="be73caa5-3381-4775-9299-b97b36555472" name="VCS.Modelling">
+    <elementDefinition Id="3026f59e-7806-4361-9908-c778219bdf5e" />
+  </package>
+</useCaseModelRoot>

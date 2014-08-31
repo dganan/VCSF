@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="SLO-e">
+  <useCaseModelRootMoniker Id="b184ddaf-7fee-43b0-a34a-c0b36bebfa05" />
+  <nestedChildShapes>
+    <actorShape Id="6100ddd2-c2a1-4ea6-bcfe-58cb9fbb9a41" absoluteBounds="2.125, 2.75, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="1310d154-6a3d-40fc-8295-c930adbed9cb" LastKnownName="Teacher" />
+      <relativeChildShapes />
+    </actorShape>
+    <useCaseShape Id="1d14004e-e0cb-47c7-a4a4-0fd0c82dffcc" absoluteBounds="3.5, 2.125, 1.875, 0.5" customColor="PeachPuff" heightOffset="0">
+      <useCaseMoniker Id="71f3bd87-c842-45c7-99ba-ff1a53348059" LastKnownName="Create assessment scene" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(2.625 : 2.92424242424242); (3.81816134853873 : 2.56267837923069)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="d8f6e71e-3748-4088-bad3-99ae135905cf" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="6100ddd2-c2a1-4ea6-bcfe-58cb9fbb9a41" />
+        <useCaseShapeMoniker Id="1d14004e-e0cb-47c7-a4a4-0fd0c82dffcc" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseShape Id="d6af96de-7b72-4565-8443-90ae58b1afed" absoluteBounds="6.375, 2.25, 2.125, 0.5" customColor="PeachPuff" heightOffset="0">
+      <useCaseMoniker Id="03d93d0b-9d6c-4314-bdd1-425e231968d2" LastKnownName="Create assessment question" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseDependencyConnector edgePoints="[(5.36376128164166 : 2.4135942200684); (6.39127736640181 : 2.45640739026674)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+      <dependencyMoniker Id="96bab2fc-3df4-4071-8fd6-3e1a8daaebc5" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="1d14004e-e0cb-47c7-a4a4-0fd0c82dffcc" />
+        <useCaseShapeMoniker Id="d6af96de-7b72-4565-8443-90ae58b1afed" />
+      </nodes>
+    </useCaseDependencyConnector>
+    <useCaseShape Id="5d8c9dc8-ac01-4639-9c55-5e69dc356af2" absoluteBounds="3.5, 3, 2.125, 0.5" customColor="PeachPuff" heightOffset="0">
+      <useCaseMoniker Id="38212d85-a735-4158-b206-031741597771" LastKnownName="Edit assessment scene" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <extendConnector edgePoints="[(4.52680587334226 : 3.00014111339585); (4.4731883987592 : 2.62481879131442)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«extend»">
+      <extendMoniker Id="c4e3d8a9-89e9-471d-936d-db13302ae48e" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="5d8c9dc8-ac01-4639-9c55-5e69dc356af2" />
+        <useCaseShapeMoniker Id="1d14004e-e0cb-47c7-a4a4-0fd0c82dffcc" />
+      </nodes>
+    </extendConnector>
+    <useCaseAssociationConnector edgePoints="[(2.625 : 3.02857142857143); (3.606772581513 : 3.14077400931577)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="61fb1ab6-b3dd-40d7-82bf-1480c35dba4e" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="6100ddd2-c2a1-4ea6-bcfe-58cb9fbb9a41" />
+        <useCaseShapeMoniker Id="5d8c9dc8-ac01-4639-9c55-5e69dc356af2" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseShape Id="704d557a-3e63-43fe-aa62-55128864ea5b" absoluteBounds="6.5, 3, 2.125, 0.5" customColor="PeachPuff" heightOffset="0">
+      <useCaseMoniker Id="2710137a-4037-45c9-bf2a-39385daf0eb5" LastKnownName="Edit assessment question" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseDependencyConnector edgePoints="[(5.08405172413793 : 2.55603448275862); (6.87894811377649 : 3.05860547185742)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+      <dependencyMoniker Id="8c0ce245-9c20-4790-bea7-591f807bbcbb" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="1d14004e-e0cb-47c7-a4a4-0fd0c82dffcc" />
+        <useCaseShapeMoniker Id="704d557a-3e63-43fe-aa62-55128864ea5b" />
+      </nodes>
+    </useCaseDependencyConnector>
+    <useCaseShape Id="50611eed-8c9f-4c41-8a43-47c9c482f8c8" absoluteBounds="6.25, 3.75, 2.125, 0.5" customColor="PeachPuff" heightOffset="0">
+      <useCaseMoniker Id="43cc6e44-7bd0-452d-9fb3-c4d2ef89a6eb" LastKnownName="Delete assessment question" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseDependencyConnector edgePoints="[(4.83752211483533 : 2.60109945621128); (6.90416133213596 : 3.7691998833812)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+      <dependencyMoniker Id="b98ee921-0b00-482e-8588-2e3f14b92330" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="1d14004e-e0cb-47c7-a4a4-0fd0c82dffcc" />
+        <useCaseShapeMoniker Id="50611eed-8c9f-4c41-8a43-47c9c482f8c8" />
+      </nodes>
+    </useCaseDependencyConnector>
+    <useCaseShape Id="cdbf4fc2-2994-4dee-b3eb-e3362cfd2175" absoluteBounds="3.5, 3.75, 2, 0.5" customColor="PeachPuff" heightOffset="0">
+      <useCaseMoniker Id="4ad72bd3-fd62-4a37-8c08-2875bce2c813" LastKnownName="Delete assessment scene" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(2.625 : 3.11764705882353); (4.03084477403825 : 3.77922107013565)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="dd1cb946-5001-41ef-a6d7-cffd65012980" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="6100ddd2-c2a1-4ea6-bcfe-58cb9fbb9a41" />
+        <useCaseShapeMoniker Id="cdbf4fc2-2994-4dee-b3eb-e3362cfd2175" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseDependencyConnector edgePoints="[(5.5 : 4); (6.25 : 4)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+      <dependencyMoniker Id="74fc3ddd-2fd7-496b-a531-6b890bbec9fd" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="cdbf4fc2-2994-4dee-b3eb-e3362cfd2175" />
+        <useCaseShapeMoniker Id="50611eed-8c9f-4c41-8a43-47c9c482f8c8" />
+      </nodes>
+    </useCaseDependencyConnector>
+  </nestedChildShapes>
+</useCaseDiagram>

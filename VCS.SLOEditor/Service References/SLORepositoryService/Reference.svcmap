@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d82ec3c1-e32e-4f6a-9ab3-7a6154b03973" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/VCS.Services/SLORepositoryService/SLORepositoryService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SLORepositoryService.xsd" MetadataType="Schema" ID="9e2969a9-d05a-48f2-b592-d0a942989aa6" SourceId="1" SourceUrl="http://localhost/VCS.Services/SLORepositoryService/SLORepositoryService.svc?xsd=xsd3" />
+    <MetadataFile FileName="SLORepositoryService1.xsd" MetadataType="Schema" ID="6c768bbc-2562-468d-aed2-4a9904aec590" SourceId="1" SourceUrl="http://localhost/VCS.Services/SLORepositoryService/SLORepositoryService.svc?xsd=xsd1" />
+    <MetadataFile FileName="SLORepositoryService.wsdl" MetadataType="Wsdl" ID="fedf3d69-8079-44ee-b916-d42395e9f816" SourceId="1" SourceUrl="http://localhost/VCS.Services/SLORepositoryService/SLORepositoryService.svc?wsdl" />
+    <MetadataFile FileName="SLORepositoryService2.xsd" MetadataType="Schema" ID="8d8aa5ce-865c-4f20-81e4-053435642089" SourceId="1" SourceUrl="http://localhost/VCS.Services/SLORepositoryService/SLORepositoryService.svc?xsd=xsd2" />
+    <MetadataFile FileName="SLORepositoryService.disco" MetadataType="Disco" ID="9e8d3952-c093-47ce-a575-d12c94fd4931" SourceId="1" SourceUrl="http://localhost/VCS.Services/SLORepositoryService/SLORepositoryService.svc?disco" />
+    <MetadataFile FileName="SLORepositoryService3.xsd" MetadataType="Schema" ID="e0c9bb76-ff9c-472e-8099-ce045ff034e0" SourceId="1" SourceUrl="http://localhost/VCS.Services/SLORepositoryService/SLORepositoryService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

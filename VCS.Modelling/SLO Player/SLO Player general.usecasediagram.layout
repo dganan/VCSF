@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="SLO-v">
+  <useCaseModelRootMoniker Id="2bcce393-b4df-4378-b1f4-9690dc0c215c" />
+  <nestedChildShapes>
+    <actorShape Id="64918366-aa2f-40af-9fe0-cad90cffda74" absoluteBounds="2.75, 1.375, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="96125542-5f34-4b66-9dcd-413e2c0300f7" LastKnownName="User" />
+      <relativeChildShapes />
+    </actorShape>
+    <useCaseShape Id="997048f1-0abb-4606-a0ce-eceb4318e837" absoluteBounds="4, 1.75, 1.25, 0.5" customColor="PeachPuff" heightOffset="0">
+      <useCaseMoniker Id="eb0a29ab-68d4-4cb6-8690-72c6fbe4af87" LastKnownName="Play storyboard" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(3.25 : 1.68269230769231); (4.08363400871963 : 1.87506938662761)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="61d08a35-38ae-4526-bd1f-7684263231c8" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="64918366-aa2f-40af-9fe0-cad90cffda74" />
+        <useCaseShapeMoniker Id="997048f1-0abb-4606-a0ce-eceb4318e837" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseShape Id="5bd10da4-b3af-4796-900e-ff86f7f4644f" absoluteBounds="6.25, 1.75, 1.25, 0.5" customColor="PeachPuff" heightOffset="0">
+      <useCaseMoniker Id="d32bb792-fdb8-45d7-bb7d-2b8e69266df6" LastKnownName="Play scene" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <includeConnector edgePoints="[(5.25 : 2); (6.25 : 2)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«include»">
+      <includeMoniker Id="193a9944-4025-4ca2-81c8-3c0352f82e58" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="997048f1-0abb-4606-a0ce-eceb4318e837" />
+        <useCaseShapeMoniker Id="5bd10da4-b3af-4796-900e-ff86f7f4644f" />
+      </nodes>
+    </includeConnector>
+    <useCaseShape Id="8efd5ced-82b4-4491-87cd-67c7862eccb4" absoluteBounds="7, 2.625, 1.75, 0.625" customColor="PeachPuff" heightOffset="0">
+      <useCaseMoniker Id="a23afaec-2b6a-451a-980b-0450406d4fa6" LastKnownName="Play assessment scene" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseGeneralizationConnector edgePoints="[(7.56350408835701 : 2.6454725828347); (7.12027417815486 : 2.22994454202019)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110">
+      <generalizationMoniker Id="24f7d56c-c24e-4c4c-9da8-f4f9e7a63d38" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="8efd5ced-82b4-4491-87cd-67c7862eccb4" />
+        <useCaseShapeMoniker Id="5bd10da4-b3af-4796-900e-ff86f7f4644f" />
+      </nodes>
+    </useCaseGeneralizationConnector>
+    <useCaseShape Id="c44a20c5-a8d1-460f-a40a-971e70786326" absoluteBounds="5, 2.625, 1.75, 0.625" customColor="PeachPuff" heightOffset="0">
+      <useCaseMoniker Id="76142122-f218-4ccb-8352-3ccbb6098da5" LastKnownName="Play dialog scene" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseGeneralizationConnector edgePoints="[(6.18649591164299 : 2.6454725828347); (6.62972582184514 : 2.22994454202019)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110">
+      <generalizationMoniker Id="8c6b8f48-bc1f-4f9b-b394-c1ca14151d07" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="c44a20c5-a8d1-460f-a40a-971e70786326" />
+        <useCaseShapeMoniker Id="5bd10da4-b3af-4796-900e-ff86f7f4644f" />
+      </nodes>
+    </useCaseGeneralizationConnector>
+    <useCaseShape Id="5a554444-5892-4cb7-843a-f5eff9f15345" absoluteBounds="3.875, 0.875, 1.625, 0.5" customColor="PeachPuff" heightOffset="0">
+      <useCaseMoniker Id="36243b6c-09b6-42be-8f05-5e5ed55ba976" LastKnownName="Show available SLOs" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(3.25 : 1.49085389211375); (3.88003443979107 : 1.1527872203847)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="16b1a033-21a8-46ee-b0e5-0b7d06d4a051" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="64918366-aa2f-40af-9fe0-cad90cffda74" />
+        <useCaseShapeMoniker Id="5a554444-5892-4cb7-843a-f5eff9f15345" />
+      </nodes>
+    </useCaseAssociationConnector>
+  </nestedChildShapes>
+</useCaseDiagram>

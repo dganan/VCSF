@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="0f43f9cd-b098-4c43-a13d-1982ea88b940" name="Process with categorization" linkedPackageId="21d18f3b-1423-4f51-9b04-180548de2faa" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="a0d0eeb0-20b9-4df0-9e0e-6eed43de860f">
+      <profileInstance Id="6add0a77-1240-47fe-941f-4529df2f2a76" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="76aa6e69-b879-460d-8335-513dd8756df7">
+      <profileInstance Id="7867b3f4-8a81-4455-a82e-dafba0deb15b" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="27259532-f7cd-4cea-a2b3-2a966d6c6b69" name="Process with categorization" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="300a8a6a-b6f1-49ba-b2c7-d31b22ba0445" />
+        <nodes>
+          <initialNode Id="f0dd0357-55bb-47ac-a993-71258bdb7f44" name="Initial1" isLeaf="false">
+            <elementDefinition Id="841040eb-613b-41c3-9349-2b0508df44ca" />
+            <flowNodeTargets>
+              <controlFlow Id="4cb6e782-1a1b-482d-bb4c-9eb776fde80e" isLeaf="false">
+                <opaqueActionMoniker Id="9cd448ad-eff3-40c5-bdbd-7e90ddbeb9be" LastKnownName="Read collaborative session as CS2 model" />
+                <elementDefinition Id="d6f836b6-6915-46f9-b7ef-0444b59ddbdc" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <activityFinalNode Id="d247ad96-20af-4923-909c-1f0c6fe54ee5" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="132e294e-d5e0-4c30-8e1b-e7d2eb95204b" />
+          </activityFinalNode>
+          <opaqueAction Id="9cd448ad-eff3-40c5-bdbd-7e90ddbeb9be" name="Read collaborative session as CS2 model" isLeaf="false">
+            <elementDefinition Id="6cc158be-004d-4087-8179-3d83a71d189d" />
+            <flowNodeTargets>
+              <controlFlow Id="35c20fa1-867e-4093-b10a-f35e6af3ed0b" isLeaf="false">
+                <mergeNodeMoniker Id="c236f4ef-f190-473c-ae4e-546b3de1621d" LastKnownName="Merge1" />
+                <elementDefinition Id="2fa08a87-e155-45cf-978a-f75a02d6107a" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="4e320372-9a80-458a-be29-68bec7c768ad" name="Create Dialog Scene Part for the current Post" isLeaf="false">
+            <elementDefinition Id="69c161b2-3711-4ace-b054-684b462a0d9d" />
+            <flowNodeTargets>
+              <controlFlow Id="64aa7a92-272c-468a-9644-9c5488e0d366" isLeaf="false">
+                <opaqueActionMoniker Id="dfb69c2d-625c-41f5-bd37-a8a181dad7c8" LastKnownName="Suggest category for Post message" />
+                <elementDefinition Id="abeee1dd-763a-4263-a16a-41feb9022063" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="dfb69c2d-625c-41f5-bd37-a8a181dad7c8" name="Suggest category for Post message" isLeaf="false">
+            <elementDefinition Id="bc38dbd6-7e0c-4a6f-a129-1b42a68c25f2" />
+            <flowNodeTargets>
+              <controlFlow Id="8f9c15ab-2292-4b71-a548-f5073682d204" isLeaf="false">
+                <decisionNodeMoniker Id="881ea879-8988-428a-a47f-3e1967e09678" LastKnownName="Decision2" />
+                <elementDefinition Id="c81c1afb-fd2e-4209-8de7-78c3fb1f2373" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="881ea879-8988-428a-a47f-3e1967e09678" name="Decision2" isLeaf="false">
+            <description>More posts</description>
+            <elementDefinition Id="ba8f7f67-7e63-4145-b9b1-dbb52794c47e" />
+            <flowNodeTargets>
+              <controlFlow Id="cc5a88bc-bcac-4fe7-8573-98b15a1058ca" isLeaf="false">
+                <activityFinalNodeMoniker Id="d247ad96-20af-4923-909c-1f0c6fe54ee5" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="b1be4f08-dc88-4df9-989f-c24efb0cb726" />
+              </controlFlow>
+              <controlFlow Id="0cb14b7a-5fa7-4bfd-9c84-9b3676555585" name="more posts" isLeaf="false">
+                <mergeNodeMoniker Id="c236f4ef-f190-473c-ae4e-546b3de1621d" LastKnownName="Merge1" />
+                <description>more posts</description>
+                <elementDefinition Id="d80ff4a5-0beb-4a8e-9787-75e77b7e8040" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <mergeNode Id="c236f4ef-f190-473c-ae4e-546b3de1621d" name="Merge1" isLeaf="false">
+            <elementDefinition Id="511bf6b6-60a4-42c6-8010-6f972b18f6bb" />
+            <flowNodeTargets>
+              <controlFlow Id="35e95464-d762-4f92-8e0d-c3f5dcba2a8f" isLeaf="false">
+                <opaqueActionMoniker Id="4e320372-9a80-458a-be29-68bec7c768ad" LastKnownName="Create Dialog Scene Part for the current Post" />
+                <elementDefinition Id="918318bb-5a92-4546-bae0-34ceb32a88f0" />
+              </controlFlow>
+            </flowNodeTargets>
+          </mergeNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="21d18f3b-1423-4f51-9b04-180548de2faa" name="VCS.Modelling">
+    <elementDefinition Id="3026f59e-7806-4361-9908-c778219bdf5e" />
+  </package>
+</activityRootModel>

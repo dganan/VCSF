@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/VCS" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/VCS" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfCollaborativeSessionDescriptor">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CollaborativeSessionDescriptor" nillable="true" type="tns:CollaborativeSessionDescriptor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCollaborativeSessionDescriptor" nillable="true" type="tns:ArrayOfCollaborativeSessionDescriptor" />
+  <xs:complexType name="CollaborativeSessionDescriptor">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CS2Object">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Site" nillable="true" type="tns:Site" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CollaborativeSessionDescriptor" nillable="true" type="tns:CollaborativeSessionDescriptor" />
+  <xs:complexType name="CS2Object">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="CS2Object" nillable="true" type="tns:CS2Object" />
+  <xs:complexType name="Site">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CS2Object">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Site" nillable="true" type="tns:Site" />
+  <xs:complexType name="CollaborativeSession">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CS2Object">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Posts" nillable="true" type="tns:ArrayOfPost" />
+          <xs:element minOccurs="0" name="Site" nillable="true" type="tns:Site" />
+          <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserAccounts" nillable="true" type="tns:ArrayOfUserAccount" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CollaborativeSession" nillable="true" type="tns:CollaborativeSession" />
+  <xs:complexType name="ArrayOfPost">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Post" nillable="true" type="tns:Post" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPost" nillable="true" type="tns:ArrayOfPost" />
+  <xs:complexType name="Post">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CS2Object">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Categories" nillable="true" type="tns:ArrayOfCategory" />
+          <xs:element minOccurs="0" name="Content" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreationDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Creator" nillable="true" type="tns:UserAccount" />
+          <xs:element minOccurs="0" name="ReplyOf" nillable="true" type="tns:Post" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Post" nillable="true" type="tns:Post" />
+  <xs:complexType name="ArrayOfCategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Category" nillable="true" type="tns:Category" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCategory" nillable="true" type="tns:ArrayOfCategory" />
+  <xs:complexType name="Category">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CS2Object">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Category" nillable="true" type="tns:Category" />
+  <xs:complexType name="UserAccount">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CS2Object">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Age" type="xs:int" />
+          <xs:element minOccurs="0" name="Avatar" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Gender" type="tns:Gender" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Role" type="tns:Role" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserAccount" nillable="true" type="tns:UserAccount" />
+  <xs:simpleType name="Gender">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Neutral" />
+      <xs:enumeration value="Female" />
+      <xs:enumeration value="Male" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Gender" nillable="true" type="tns:Gender" />
+  <xs:simpleType name="Role">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Teacher" />
+      <xs:enumeration value="Student" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Role" nillable="true" type="tns:Role" />
+  <xs:complexType name="ArrayOfUserAccount">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserAccount" nillable="true" type="tns:UserAccount" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserAccount" nillable="true" type="tns:ArrayOfUserAccount" />
+</xs:schema>

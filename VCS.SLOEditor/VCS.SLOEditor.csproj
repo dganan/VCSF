@@ -1,0 +1,356 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3C8643B5-DDDA-44D8-BF21-D7ADF9745BFB}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VCS</RootNamespace>
+    <AssemblyName>VCS.SLOEditor</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>SLOEditor.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>VCS.SLOEditor</SilverlightAppEntry>
+    <TestPageFileName>VCS.SLOEditorTestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <EnableOutOfBrowser>false</EnableOutOfBrowser>
+    <OutOfBrowserSettingsFile>Properties\OutOfBrowserSettings.xml</OutOfBrowserSettingsFile>
+    <UsePlatformExtensions>false</UsePlatformExtensions>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <LinkedServerProject>
+    </LinkedServerProject>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Controls, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Windows.Controls.Navigation, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Toolkit, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft SDKs\Silverlight\v4.0\Toolkit\Apr10\Bin\System.Windows.Controls.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Toolkit.Internals, Version=4.0.5.0, Culture=neutral, PublicKeyToken=2c5c654d367bf4a7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft SDKs\Silverlight\v4.0\Toolkit\Apr10\Bin\System.Windows.Controls.Toolkit.Internals.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\CharacterEditor.cs" />
+    <Compile Include="Controllers\AssessmentSceneEditor.cs" />
+    <Compile Include="Controllers\AssessmentSceneQuestionEditor.cs" />
+    <Compile Include="Controllers\ReferencesSceneEditor.cs" />
+    <Compile Include="Controllers\EmotionalTestSceneEditor.cs" />
+    <Compile Include="Controllers\DialogSceneEditor.cs" />
+    <Compile Include="Controllers\DialogScenePartEditor.cs" />
+    <Compile Include="Controllers\SceneEditor.cs" />
+    <Compile Include="Controllers\StoryBoardEditor.cs" />
+    <Compile Include="Controls\ClickableGridPanel.cs" />
+    <Compile Include="Controls\NumericUpDown.xaml.cs">
+      <DependentUpon>NumericUpDown.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DoubleListBox.xaml.cs">
+      <DependentUpon>DoubleListBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SpecialMarksChooser.xaml.cs">
+      <DependentUpon>SpecialMarksChooser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converters\AnimationAvatarToImageSourceConverter.cs" />
+    <Compile Include="Converters\BoolToVisibilityConverter.cs" />
+    <Compile Include="Converters\ScenesToJumpToVisibilityConverter.cs" />
+    <Compile Include="Converters\ScenesToJumpToTextConverter.cs" />
+    <Compile Include="Converters\SceneTypeToImageSourceConverter.cs" />
+    <Compile Include="Converters\IsCorrectAnswerToBackgroundConverter.cs" />
+    <Compile Include="Converters\EmotionToImageSourceConverter.cs" />
+    <Compile Include="Pages\CharactersEditorPage.xaml.cs">
+      <DependentUpon>CharactersEditorPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CharacterEditorPage.xaml.cs">
+      <DependentUpon>CharacterEditorPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AssessmentSceneEditorPage.xaml.cs">
+      <DependentUpon>AssessmentSceneEditorPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AssessmentSceneQuestionEditorPage.xaml.cs">
+      <DependentUpon>AssessmentSceneQuestionEditorPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ReferencesSceneEditorPage.xaml.cs">
+      <DependentUpon>ReferencesSceneEditorPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EmotionalTestSceneEditorPage.xaml.cs">
+      <DependentUpon>EmotionalTestSceneEditorPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\StartPage.xaml.cs">
+      <DependentUpon>StartPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CreateNewScenePage.xaml.cs">
+      <DependentUpon>CreateNewScenePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\DialogSceneEditorPage.xaml.cs">
+      <DependentUpon>DialogSceneEditorPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\DialogScenePartEditorPage.xaml.cs">
+      <DependentUpon>DialogScenePartEditorPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\StoryBoardEditorPage.xaml.cs">
+      <DependentUpon>StoryBoardEditorPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\KeywordsRepositoryService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SLORepositoryService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SpeechActClassificationService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SLOEditor.xaml.cs">
+      <DependentUpon>SLOEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AvailableSLOsListPage.xaml.cs">
+      <DependentUpon>AvailableSLOsListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Pages.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SLOEditor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="SLOEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="Controls\NumericUpDown.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\DoubleListBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\SpecialMarksChooser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AvailableSLOsListPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\CharactersEditorPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\CharacterEditorPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\AssessmentSceneEditorPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\AssessmentSceneQuestionEditorPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\ReferencesSceneEditorPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\EmotionalTestSceneEditorPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\StartPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\CreateNewScenePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\DialogSceneEditorPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\DialogScenePartEditorPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\StoryBoardEditorPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\DataSources\VCS.SLO.datasource" />
+    <None Include="Properties\DataSources\VCS.SLO1.datasource" />
+    <None Include="Properties\DataSources\VCS.SLODescriptor.datasource" />
+    <None Include="Properties\DataSources\VCS.SLODescriptor1.datasource" />
+    <None Include="Service References\KeywordsRepositoryService\KeywordsRepositoryService.wsdl" />
+    <None Include="Service References\KeywordsRepositoryService\KeywordsRepositoryService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\KeywordsRepositoryService\KeywordsRepositoryService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\KeywordsRepositoryService\KeywordsRepositoryService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\KeywordsRepositoryService\KeywordsRepositoryService.disco" />
+    <None Include="Service References\KeywordsRepositoryService\configuration91.svcinfo" />
+    <None Include="Service References\KeywordsRepositoryService\configuration.svcinfo" />
+    <None Include="Service References\KeywordsRepositoryService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SLORepositoryService\SLORepositoryService.wsdl" />
+    <None Include="Service References\SLORepositoryService\SLORepositoryService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SLORepositoryService\SLORepositoryService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SLORepositoryService\SLORepositoryService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SLORepositoryService\SLORepositoryService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SpeechActClassificationService\SpeechActClassificationService.wsdl" />
+    <None Include="Service References\SpeechActClassificationService\SpeechActClassificationService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SpeechActClassificationService\SpeechActClassificationService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SpeechActClassificationService\SpeechActClassificationService11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Resource Include="images\add.png" />
+    <Resource Include="images\all_to_left.png" />
+    <Resource Include="images\all_to_right.png" />
+    <Resource Include="images\back.png" />
+    <Resource Include="images\down.png" />
+    <Resource Include="images\duplicate.png" />
+    <Resource Include="images\edit.png" />
+    <Resource Include="images\first.png" />
+    <Resource Include="images\last.png" />
+    <Resource Include="images\remove.png" />
+    <Resource Include="images\save.png" />
+    <Resource Include="images\saveas.png" />
+    <Resource Include="images\to_left.png" />
+    <Resource Include="images\to_right.png" />
+    <Resource Include="images\up.png" />
+    <None Include="Service References\SpeechActClassificationService\SpeechActClassificationService.disco" />
+    <None Include="Service References\SpeechActClassificationService\configuration91.svcinfo" />
+    <None Include="Service References\SpeechActClassificationService\configuration.svcinfo" />
+    <None Include="Service References\SpeechActClassificationService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Resource Include="images\check.png" />
+    <Resource Include="images\assessment.png" />
+    <Resource Include="images\dialog.png" />
+    <Resource Include="images\emotionaltest_.png" />
+    <Resource Include="images\emotionaltest.png" />
+    <Resource Include="images\video.png" />
+    <Resource Include="images\end.png" />
+    <None Include="Service References\SLORepositoryService\SLORepositoryService.disco" />
+    <None Include="Service References\SLORepositoryService\configuration91.svcinfo" />
+    <None Include="Service References\SLORepositoryService\configuration.svcinfo" />
+    <None Include="Service References\SLORepositoryService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Resource Include="images\references.png" />
+    <Content Include="ServiceReferences.ClientConfig" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\VCS.SLOToolsLib\VCS.SLOToolsLib.csproj">
+      <Project>{874FAB67-1176-467A-AF47-5447966F9DDC}</Project>
+      <Name>VCS.SLOToolsLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\KeywordsRepositoryService\" />
+    <WCFMetadataStorage Include="Service References\SLORepositoryService\" />
+    <WCFMetadataStorage Include="Service References\SpeechActClassificationService\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

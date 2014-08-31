@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9A30E043-EA1E-4EE2-91BF-437597EBCE9D}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VCS</RootNamespace>
+    <AssemblyName>VCS.Testing</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IvanAkcheurov.NClassify">
+      <HintPath>..\references\IvanAkcheurov.NClassify.dll</HintPath>
+    </Reference>
+    <Reference Include="IvanAkcheurov.NTextCat.Lib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\references\IvanAkcheurov.NTextCat.Lib.dll</HintPath>
+    </Reference>
+    <Reference Include="IvanAkcheurov.NTextCat.Lib.Legacy, Version=1.0.0.0, Culture=neutral, PublicKeyToken=54fb049634b23d81, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\references\IvanAkcheurov.NTextCat.Lib.Legacy.dll</HintPath>
+    </Reference>
+    <Reference Include="PowerCollections">
+      <HintPath>..\references\PowerCollections.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="test1.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VCS.ConversionLayer\VCS.ConversionLayer.csproj">
+      <Project>{9A5E613A-BB19-4B74-8113-C1FFED54A7D4}</Project>
+      <Name>VCS.ConversionLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VCS.CS2Model\VCS.CS2Model.csproj">
+      <Project>{5DCA0BE3-4BDF-4B6D-9982-8C55C1CA5A3D}</Project>
+      <Name>VCS.CS2Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VCS.CS2toSLO\VCS.CS2toSLO.csproj">
+      <Project>{FAFC707D-8054-4E39-9DBB-30E4EFFBD550}</Project>
+      <Name>VCS.CS2toSLO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VCS.PhpBBForumsUOCConverter\VCS.PhpBBForumsUOCConverter.csproj">
+      <Project>{05C59EF9-357D-4305-9EEB-2BEFFD90B559}</Project>
+      <Name>VCS.PhpBBForumsUOCConverter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VCS.SLOModel\VCS.SLOModel.csproj">
+      <Project>{08C38215-5A9C-4DB1-8BBA-1A22355E8101}</Project>
+      <Name>VCS.SLOModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VCS.TestConverter\VCS.TestConverter.csproj">
+      <Project>{E5C34DFD-ACEA-4B4A-8BC3-15F4CAF64F85}</Project>
+      <Name>VCS.TestConverter</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

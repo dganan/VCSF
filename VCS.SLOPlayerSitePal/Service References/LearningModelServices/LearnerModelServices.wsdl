@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="SetUserCognitiveState">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="learnerID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="txLevList" type="tns:ArrayOfTaxonLevelValue" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfTaxonLevelValue">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TaxonLevelValue" nillable="true" type="tns:TaxonLevelValue" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TaxonLevelValue">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ValueObject">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="TaxonID" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="Level" type="s:double" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ValueObject">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ErrorCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorDescription" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OperationResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ValueObject" />
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="SetUserCognitiveStateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetUserCognitiveStateResult" type="tns:OperationResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetUserCognitiveStateByUserName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="learnerUserName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="portalId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="txLevList" type="tns:ArrayOfTaxonLevelValue" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetUserCognitiveStateByUserNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetUserCognitiveStateByUserNameResult" type="tns:OperationResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserCognitiveStateByUserName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="learnerUserName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="portalId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserCognitiveStateByUserNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserCognitiveStateByUserNameResult" type="tns:ArrayOfTaxonLevelValue" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserCognitiveState">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="learnerID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserCognitiveStateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserCognitiveStateResult" type="tns:ArrayOfTaxonLevelValue" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddCSTaxonLevel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="learnerID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="taxonLevel" type="tns:TaxonLevelValue" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddCSTaxonLevelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddCSTaxonLevelResult" type="tns:OperationResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddCSTaxonLevelByUserName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="learnerUserName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="portalId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="taxonLevel" type="tns:TaxonLevelValue" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddCSTaxonLevelByUserNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddCSTaxonLevelByUserNameResult" type="tns:OperationResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EraseCSTaxonLevel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="learnerID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="taxonID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EraseCSTaxonLevelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EraseCSTaxonLevelResult" type="tns:OperationResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EraseCSTaxonLevelByUserName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="learnerUserName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="portalId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="taxonID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EraseCSTaxonLevelByUserNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EraseCSTaxonLevelByUserNameResult" type="tns:OperationResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserCSMinLevel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="learnerID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="minLev" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserCSMinLevelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserCSMinLevelResult" type="tns:ArrayOfTaxonLevelValue" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserCSMinLevelByUserName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="learnerUserName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="portalId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="minLev" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserCSMinLevelByUserNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserCSMinLevelByUserNameResult" type="tns:ArrayOfTaxonLevelValue" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SetUserCognitiveStateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetUserCognitiveState" />
+  </wsdl:message>
+  <wsdl:message name="SetUserCognitiveStateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetUserCognitiveStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetUserCognitiveStateByUserNameSoapIn">
+    <wsdl:part name="parameters" element="tns:SetUserCognitiveStateByUserName" />
+  </wsdl:message>
+  <wsdl:message name="SetUserCognitiveStateByUserNameSoapOut">
+    <wsdl:part name="parameters" element="tns:SetUserCognitiveStateByUserNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserCognitiveStateByUserNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserCognitiveStateByUserName" />
+  </wsdl:message>
+  <wsdl:message name="GetUserCognitiveStateByUserNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserCognitiveStateByUserNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserCognitiveStateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserCognitiveState" />
+  </wsdl:message>
+  <wsdl:message name="GetUserCognitiveStateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserCognitiveStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddCSTaxonLevelSoapIn">
+    <wsdl:part name="parameters" element="tns:AddCSTaxonLevel" />
+  </wsdl:message>
+  <wsdl:message name="AddCSTaxonLevelSoapOut">
+    <wsdl:part name="parameters" element="tns:AddCSTaxonLevelResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddCSTaxonLevelByUserNameSoapIn">
+    <wsdl:part name="parameters" element="tns:AddCSTaxonLevelByUserName" />
+  </wsdl:message>
+  <wsdl:message name="AddCSTaxonLevelByUserNameSoapOut">
+    <wsdl:part name="parameters" element="tns:AddCSTaxonLevelByUserNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="EraseCSTaxonLevelSoapIn">
+    <wsdl:part name="parameters" element="tns:EraseCSTaxonLevel" />
+  </wsdl:message>
+  <wsdl:message name="EraseCSTaxonLevelSoapOut">
+    <wsdl:part name="parameters" element="tns:EraseCSTaxonLevelResponse" />
+  </wsdl:message>
+  <wsdl:message name="EraseCSTaxonLevelByUserNameSoapIn">
+    <wsdl:part name="parameters" element="tns:EraseCSTaxonLevelByUserName" />
+  </wsdl:message>
+  <wsdl:message name="EraseCSTaxonLevelByUserNameSoapOut">
+    <wsdl:part name="parameters" element="tns:EraseCSTaxonLevelByUserNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserCSMinLevelSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserCSMinLevel" />
+  </wsdl:message>
+  <wsdl:message name="GetUserCSMinLevelSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserCSMinLevelResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserCSMinLevelByUserNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserCSMinLevelByUserName" />
+  </wsdl:message>
+  <wsdl:message name="GetUserCSMinLevelByUserNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserCSMinLevelByUserNameResponse" />
+  </wsdl:message>
+  <wsdl:portType name="LearningModelServicesSoap">
+    <wsdl:operation name="SetUserCognitiveState">
+      <wsdl:input message="tns:SetUserCognitiveStateSoapIn" />
+      <wsdl:output message="tns:SetUserCognitiveStateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUserCognitiveStateByUserName">
+      <wsdl:input message="tns:SetUserCognitiveStateByUserNameSoapIn" />
+      <wsdl:output message="tns:SetUserCognitiveStateByUserNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserCognitiveStateByUserName">
+      <wsdl:input message="tns:GetUserCognitiveStateByUserNameSoapIn" />
+      <wsdl:output message="tns:GetUserCognitiveStateByUserNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserCognitiveState">
+      <wsdl:input message="tns:GetUserCognitiveStateSoapIn" />
+      <wsdl:output message="tns:GetUserCognitiveStateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCSTaxonLevel">
+      <wsdl:input message="tns:AddCSTaxonLevelSoapIn" />
+      <wsdl:output message="tns:AddCSTaxonLevelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCSTaxonLevelByUserName">
+      <wsdl:input message="tns:AddCSTaxonLevelByUserNameSoapIn" />
+      <wsdl:output message="tns:AddCSTaxonLevelByUserNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EraseCSTaxonLevel">
+      <wsdl:input message="tns:EraseCSTaxonLevelSoapIn" />
+      <wsdl:output message="tns:EraseCSTaxonLevelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EraseCSTaxonLevelByUserName">
+      <wsdl:input message="tns:EraseCSTaxonLevelByUserNameSoapIn" />
+      <wsdl:output message="tns:EraseCSTaxonLevelByUserNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserCSMinLevel">
+      <wsdl:input message="tns:GetUserCSMinLevelSoapIn" />
+      <wsdl:output message="tns:GetUserCSMinLevelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserCSMinLevelByUserName">
+      <wsdl:input message="tns:GetUserCSMinLevelByUserNameSoapIn" />
+      <wsdl:output message="tns:GetUserCSMinLevelByUserNameSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="LearningModelServicesSoap" type="tns:LearningModelServicesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SetUserCognitiveState">
+      <soap:operation soapAction="http://tempuri.org/SetUserCognitiveState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUserCognitiveStateByUserName">
+      <soap:operation soapAction="http://tempuri.org/SetUserCognitiveStateByUserName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserCognitiveStateByUserName">
+      <soap:operation soapAction="http://tempuri.org/GetUserCognitiveStateByUserName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserCognitiveState">
+      <soap:operation soapAction="http://tempuri.org/GetUserCognitiveState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCSTaxonLevel">
+      <soap:operation soapAction="http://tempuri.org/AddCSTaxonLevel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCSTaxonLevelByUserName">
+      <soap:operation soapAction="http://tempuri.org/AddCSTaxonLevelByUserName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EraseCSTaxonLevel">
+      <soap:operation soapAction="http://tempuri.org/EraseCSTaxonLevel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EraseCSTaxonLevelByUserName">
+      <soap:operation soapAction="http://tempuri.org/EraseCSTaxonLevelByUserName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserCSMinLevel">
+      <soap:operation soapAction="http://tempuri.org/GetUserCSMinLevel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserCSMinLevelByUserName">
+      <soap:operation soapAction="http://tempuri.org/GetUserCSMinLevelByUserName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="LearningModelServicesSoap12" type="tns:LearningModelServicesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SetUserCognitiveState">
+      <soap12:operation soapAction="http://tempuri.org/SetUserCognitiveState" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUserCognitiveStateByUserName">
+      <soap12:operation soapAction="http://tempuri.org/SetUserCognitiveStateByUserName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserCognitiveStateByUserName">
+      <soap12:operation soapAction="http://tempuri.org/GetUserCognitiveStateByUserName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserCognitiveState">
+      <soap12:operation soapAction="http://tempuri.org/GetUserCognitiveState" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCSTaxonLevel">
+      <soap12:operation soapAction="http://tempuri.org/AddCSTaxonLevel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCSTaxonLevelByUserName">
+      <soap12:operation soapAction="http://tempuri.org/AddCSTaxonLevelByUserName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EraseCSTaxonLevel">
+      <soap12:operation soapAction="http://tempuri.org/EraseCSTaxonLevel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EraseCSTaxonLevelByUserName">
+      <soap12:operation soapAction="http://tempuri.org/EraseCSTaxonLevelByUserName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserCSMinLevel">
+      <soap12:operation soapAction="http://tempuri.org/GetUserCSMinLevel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserCSMinLevelByUserName">
+      <soap12:operation soapAction="http://tempuri.org/GetUserCSMinLevelByUserName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LearningModelServices">
+    <wsdl:port name="LearningModelServicesSoap" binding="tns:LearningModelServicesSoap">
+      <soap:address location="http://iwtalice.crmpa.unisa.it/iwt/remoteservices/externalservices/LearnerModelServices.asmx" />
+    </wsdl:port>
+    <wsdl:port name="LearningModelServicesSoap12" binding="tns:LearningModelServicesSoap12">
+      <soap12:address location="http://iwtalice.crmpa.unisa.it/iwt/remoteservices/externalservices/LearnerModelServices.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

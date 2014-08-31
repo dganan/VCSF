@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{08C38215-5A9C-4DB1-8BBA-1A22355E8101}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VCS</RootNamespace>
+    <AssemblyName>VCS.SLOModel</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>VCS.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Answer.cs" />
+    <Compile Include="AssessmentScene.cs" />
+    <Compile Include="AnimationAvatar.cs" />
+    <Compile Include="Character.cs" />
+    <Compile Include="AssessmentJumpRule.cs" />
+    <Compile Include="ReferencesScene.cs" />
+    <Compile Include="ReferencesSceneReference.cs" />
+    <Compile Include="Emoticon.cs" />
+    <Compile Include="EmotionDeferred.cs" />
+    <Compile Include="EmotionalTestType.cs" />
+    <Compile Include="Emotion.cs" />
+    <Compile Include="EmotionalTestScene.cs" />
+    <Compile Include="Language.cs" />
+    <Compile Include="AssessmentSceneQuestion.cs" />
+    <Compile Include="SceneFactory.cs" />
+    <Compile Include="SceneType.cs" />
+    <Compile Include="SLODescriptor.cs" />
+    <Compile Include="DialogScene.cs" />
+    <Compile Include="DialogSpecialMark.cs" />
+    <Compile Include="SLOElement.cs" />
+    <Compile Include="SLOException.cs" />
+    <Compile Include="VideoScene.cs" />
+    <Compile Include="DialogScenePart.cs" />
+    <Compile Include="EmotionalState.cs" />
+    <Compile Include="Scene.cs" />
+    <Compile Include="ScenePart.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SLO.cs" />
+    <Compile Include="SLOReader.cs" />
+    <Compile Include="SLOWriter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AssessmentModel.cd" />
+    <None Include="DialogSceneModel.cd" />
+    <None Include="SLOModel.cd" />
+    <None Include="VCS.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VCS.Common\VCS.Common.csproj">
+      <Project>{BCEABFA8-AE43-4AE3-9DD2-068B5EA5157E}</Project>
+      <Name>VCS.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

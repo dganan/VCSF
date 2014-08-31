@@ -1,0 +1,539 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{874FAB67-1176-467A-AF47-5447966F9DDC}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VCS</RootNamespace>
+    <AssemblyName>VCS.SLOToolsLib</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>false</SilverlightApplication>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>VCS.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System.ComponentModel.DataAnnotations, Version=2.0.5.0, Culture=neutral, PublicKeyToken=ddd0da4d3e678217" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Controls.Data.Input, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Windows.Controls.Navigation, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\VCS.Common\Age.cs">
+      <Link>Age.cs</Link>
+    </Compile>
+    <Compile Include="..\VCS.Common\Gender.cs">
+      <Link>Gender.cs</Link>
+    </Compile>
+    <Compile Include="..\VCS.Common\HtmlStringExtension.cs">
+      <Link>HtmlStringExtension.cs</Link>
+    </Compile>
+    <Compile Include="..\VCS.CS2Model\Category.cs">
+      <Link>Category.cs</Link>
+    </Compile>
+    <Compile Include="..\VCS.CS2Model\CollaborativeSession.cs">
+      <Link>CollaborativeSession.cs</Link>
+    </Compile>
+    <Compile Include="..\VCS.CS2Model\CollaborativeSessionDescriptor.cs">
+      <Link>CollaborativeSessionDescriptor.cs</Link>
+    </Compile>
+    <Compile Include="..\VCS.CS2Model\CS2Object.cs">
+      <Link>CS2Object.cs</Link>
+    </Compile>
+    <Compile Include="..\VCS.CS2Model\Post.cs">
+      <Link>Post.cs</Link>
+    </Compile>
+    <Compile Include="..\VCS.CS2Model\Role.cs">
+      <Link>Role.cs</Link>
+    </Compile>
+    <Compile Include="..\VCS.CS2Model\Site.cs">
+      <Link>Site.cs</Link>
+    </Compile>
+    <Compile Include="..\VCS.CS2Model\UserAccount.cs">
+      <Link>UserAccount.cs</Link>
+    </Compile>
+    <Compile Include="..\VCS.SLOModel\AnimationAvatar.cs">
+      <Link>AnimationAvatar.cs</Link>
+    </Compile>
+    <Compile Include="..\VCS.SLOModel\Answer.cs">
+      <Link>Answer.cs</Link>
+    </Compile>
+    <Compile Include="..\VCS.SLOModel\AssessmentJumpRule.cs">
+      <Link>AssessmentJumpRule.cs</Link>
+    </Compile>
+    <Compile Include="..\VCS.SLOModel\AssessmentScene.cs">
+      <Link>AssessmentScene.cs</Link>
+    </Compile>
+    <Compile Include="..\VCS.SLOModel\AssessmentSceneQuestion.cs">
+      <Link>AssessmentSceneQuestion.cs</Link>
+    </Compile>
+    <Compile Include="..\VCS.SLOModel\Character.cs">
+      <Link>Character.cs</Link>
+    </Compile>
+    <Compile Include="..\VCS.SLOModel\DialogScene.cs">
+      <Link>DialogScene.cs</Link>
+    </Compile>
+    <Compile Include="..\VCS.SLOModel\DialogScenePart.cs">
+      <Link>DialogScenePart.cs</Link>
+    </Compile>
+    <Compile Include="..\VCS.SLOModel\DialogSpecialMark.cs">
+      <Link>DialogSpecialMark.cs</Link>
+    </Compile>
+    <Compile Include="..\VCS.SLOModel\Emoticon.cs">
+      <Link>Emoticon.cs</Link>
+    </Compile>
+    <Compile Include="..\VCS.SLOModel\Emotion.cs">
+      <Link>Emotion.cs</Link>
+    </Compile>
+    <Compile Include="..\VCS.SLOModel\EmotionalState.cs">
+      <Link>EmotionalState.cs</Link>
+    </Compile>
+    <Compile Include="..\VCS.SLOModel\EmotionalTestScene.cs">
+      <Link>EmotionalTestScene.cs</Link>
+    </Compile>
+    <Compile Include="..\VCS.SLOModel\EmotionalTestType.cs">
+      <Link>EmotionalTestType.cs</Link>
+    </Compile>
+    <Compile Include="..\VCS.SLOModel\EmotionDeferred.cs">
+      <Link>EmotionDeferred.cs</Link>
+    </Compile>
+    <Compile Include="..\VCS.SLOModel\Language.cs">
+      <Link>Language.cs</Link>
+    </Compile>
+    <Compile Include="..\VCS.SLOModel\ReferencesScene.cs">
+      <Link>ReferencesScene.cs</Link>
+    </Compile>
+    <Compile Include="..\VCS.SLOModel\ReferencesSceneReference.cs">
+      <Link>ReferencesSceneReference.cs</Link>
+    </Compile>
+    <Compile Include="..\VCS.SLOModel\Scene.cs">
+      <Link>Scene.cs</Link>
+    </Compile>
+    <Compile Include="..\VCS.SLOModel\SceneFactory.cs">
+      <Link>SceneFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\VCS.SLOModel\ScenePart.cs">
+      <Link>ScenePart.cs</Link>
+    </Compile>
+    <Compile Include="..\VCS.SLOModel\SceneType.cs">
+      <Link>SceneType.cs</Link>
+    </Compile>
+    <Compile Include="..\VCS.SLOModel\SLO.cs">
+      <Link>SLO.cs</Link>
+    </Compile>
+    <Compile Include="..\VCS.SLOModel\SLODescriptor.cs">
+      <Link>SLODescriptor.cs</Link>
+    </Compile>
+    <Compile Include="..\VCS.SLOModel\SLOElement.cs">
+      <Link>SLOElement.cs</Link>
+    </Compile>
+    <Compile Include="..\VCS.SLOModel\SLOException.cs">
+      <Link>SLOException.cs</Link>
+    </Compile>
+    <Compile Include="..\VCS.SLOModel\VideoScene.cs">
+      <Link>VideoScene.cs</Link>
+    </Compile>
+    <Compile Include="ActivityLogger.cs" />
+    <Compile Include="CharacterExtension.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="IndicatorColorToColor.cs" />
+    <Compile Include="QuestionResult.cs" />
+    <Compile Include="UserAssessmentInfo.cs" />
+    <Compile Include="ExceptionHandler.cs" />
+    <Compile Include="ImageExtensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReferencePreservingDataContractSerializerOperationBehavior.cs" />
+    <Compile Include="Service References\ActivityLogService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="UserEmotionalInfo.cs" />
+    <Compile Include="UserInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ActivityLogService\ActivityLogService.disco" />
+    <None Include="Service References\ActivityLogService\configuration91.svcinfo" />
+    <None Include="Service References\ActivityLogService\configuration.svcinfo" />
+    <None Include="Service References\ActivityLogService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Resource Include="images\avatars\nofoto.jpg" />
+    <Resource Include="images\emotions\angry.jpg" />
+    <Resource Include="images\emotions\anxious.jpg" />
+    <Resource Include="images\emotions\bored.jpg" />
+    <Resource Include="images\emotions\confused.jpg" />
+    <Resource Include="images\emotions\enthusiastic.jpg" />
+    <Resource Include="images\emotions\excited.jpg" />
+    <Resource Include="images\emotions\fine.jpg" />
+    <Resource Include="images\emotions\happy.jpg" />
+    <Resource Include="images\emotions\inspired.jpg" />
+    <Resource Include="images\emotions\interested.jpg" />
+    <Resource Include="images\emotions\neutral.jpg" />
+    <Resource Include="images\emotions\other.jpg" />
+    <Resource Include="images\emotions\puzzled.jpg" />
+    <Resource Include="images\emotions\relaxed.jpg" />
+    <Resource Include="images\emotions\sad.jpg" />
+    <Resource Include="images\emotions\sleepy.jpg" />
+    <Resource Include="images\emotions\tired.jpg" />
+    <Resource Include="images\emotions\unhappy.jpg" />
+    <Resource Include="images\emotions\very_happy.jpg" />
+    <Resource Include="images\marks\accept.png" />
+    <Resource Include="images\marks\cancel.png" />
+    <Resource Include="images\marks\exclamation.png" />
+    <Resource Include="images\marks\medal_bronze.png" />
+    <Resource Include="images\marks\medal_first.png" />
+    <Resource Include="images\marks\medal_gold.png" />
+    <Resource Include="images\marks\medal_silver.png" />
+    <Resource Include="images\marks\question.png" />
+    <Resource Include="images\marks\star_black.png" />
+    <Resource Include="images\marks\star_blue.png" />
+    <Resource Include="images\marks\star_gold.png" />
+    <Resource Include="images\marks\star_green.png" />
+    <Resource Include="images\marks\star_orange.png" />
+    <Resource Include="images\marks\star_purple.png" />
+    <Resource Include="images\marks\star_red.png" />
+    <Resource Include="images\emoticons\angry.png" />
+    <Resource Include="images\emoticons\crying.png" />
+    <Resource Include="images\emoticons\devilish.png" />
+    <Resource Include="images\emoticons\happy.png" />
+    <Resource Include="images\emoticons\none.png" />
+    <Resource Include="images\emoticons\normal.png" />
+    <Resource Include="images\emoticons\sad.png" />
+    <Resource Include="images\emoticons\surprised.png" />
+    <Resource Include="images\emoticons\worried.png" />
+    <Resource Include="images\avatars\Female0_closed_closed.jpg" />
+    <Resource Include="images\avatars\Female0_opened_closed.jpg" />
+    <Resource Include="images\avatars\Female0_opened_opened.jpg" />
+    <Resource Include="images\avatars\Female10_closed_closed.jpg" />
+    <Resource Include="images\avatars\Female10_opened_closed.jpg" />
+    <Resource Include="images\avatars\Female10_opened_opened.jpg" />
+    <Resource Include="images\avatars\Female11_closed_closed.jpg" />
+    <Resource Include="images\avatars\Female11_opened_closed.jpg" />
+    <Resource Include="images\avatars\Female11_opened_opened.jpg" />
+    <Resource Include="images\avatars\Female12_closed_closed.jpg" />
+    <Resource Include="images\avatars\Female12_opened_closed.jpg" />
+    <Resource Include="images\avatars\Female12_opened_opened.jpg" />
+    <Resource Include="images\avatars\Female13_closed_closed.jpg" />
+    <Resource Include="images\avatars\Female13_opened_closed.jpg" />
+    <Resource Include="images\avatars\Female13_opened_opened.jpg" />
+    <Resource Include="images\avatars\Female14_closed_closed.jpg" />
+    <Resource Include="images\avatars\Female14_opened_closed.jpg" />
+    <Resource Include="images\avatars\Female14_opened_opened.jpg" />
+    <Resource Include="images\avatars\Female15_closed_closed.jpg" />
+    <Resource Include="images\avatars\Female15_opened_closed.jpg" />
+    <Resource Include="images\avatars\Female15_opened_opened.jpg" />
+    <Resource Include="images\avatars\Female16_closed_closed.jpg" />
+    <Resource Include="images\avatars\Female16_opened_closed.jpg" />
+    <Resource Include="images\avatars\Female16_opened_opened.jpg" />
+    <Resource Include="images\avatars\Female17_closed_closed.jpg" />
+    <Resource Include="images\avatars\Female17_opened_closed.jpg" />
+    <Resource Include="images\avatars\Female17_opened_opened.jpg" />
+    <Resource Include="images\avatars\Female18_closed_closed.jpg" />
+    <Resource Include="images\avatars\Female18_opened_closed.jpg" />
+    <Resource Include="images\avatars\Female18_opened_opened.jpg" />
+    <Resource Include="images\avatars\Female19_closed_closed.jpg" />
+    <Resource Include="images\avatars\Female19_opened_closed.jpg" />
+    <Resource Include="images\avatars\Female19_opened_opened.jpg" />
+    <Resource Include="images\avatars\Female1_closed_closed.jpg" />
+    <Resource Include="images\avatars\Female1_opened_closed.jpg" />
+    <Resource Include="images\avatars\Female1_opened_opened.jpg" />
+    <Resource Include="images\avatars\Female20_closed_closed.jpg" />
+    <Resource Include="images\avatars\Female20_opened_closed.jpg" />
+    <Resource Include="images\avatars\Female20_opened_opened.jpg" />
+    <Resource Include="images\avatars\Female21_closed_closed.jpg" />
+    <Resource Include="images\avatars\Female21_opened_closed.jpg" />
+    <Resource Include="images\avatars\Female21_opened_opened.jpg" />
+    <Resource Include="images\avatars\Female22_closed_closed.jpg" />
+    <Resource Include="images\avatars\Female22_opened_closed.jpg" />
+    <Resource Include="images\avatars\Female22_opened_opened.jpg" />
+    <Resource Include="images\avatars\Female23_closed_closed.jpg" />
+    <Resource Include="images\avatars\Female23_opened_closed.jpg" />
+    <Resource Include="images\avatars\Female23_opened_opened.jpg" />
+    <Resource Include="images\avatars\Female24_closed_closed.jpg" />
+    <Resource Include="images\avatars\Female24_opened_closed.jpg" />
+    <Resource Include="images\avatars\Female24_opened_opened.jpg" />
+    <Resource Include="images\avatars\Female25_closed_closed.jpg" />
+    <Resource Include="images\avatars\Female25_opened_closed.jpg" />
+    <Resource Include="images\avatars\Female25_opened_opened.jpg" />
+    <Resource Include="images\avatars\Female26_closed_closed.jpg" />
+    <Resource Include="images\avatars\Female26_opened_closed.jpg" />
+    <Resource Include="images\avatars\Female26_opened_opened.jpg" />
+    <Resource Include="images\avatars\Female27_closed_closed.jpg" />
+    <Resource Include="images\avatars\Female27_opened_closed.jpg" />
+    <Resource Include="images\avatars\Female27_opened_opened.jpg" />
+    <Resource Include="images\avatars\Female28_closed_closed.jpg" />
+    <Resource Include="images\avatars\Female28_opened_closed.jpg" />
+    <Resource Include="images\avatars\Female28_opened_opened.jpg" />
+    <Resource Include="images\avatars\Female29_closed_closed.jpg" />
+    <Resource Include="images\avatars\Female29_opened_closed.jpg" />
+    <Resource Include="images\avatars\Female29_opened_opened.jpg" />
+    <Resource Include="images\avatars\Female2_closed_closed.jpg" />
+    <Resource Include="images\avatars\Female2_opened_closed.jpg" />
+    <Resource Include="images\avatars\Female2_opened_opened.jpg" />
+    <Resource Include="images\avatars\Female30_closed_closed.jpg" />
+    <Resource Include="images\avatars\Female30_opened_closed.jpg" />
+    <Resource Include="images\avatars\Female30_opened_opened.jpg" />
+    <Resource Include="images\avatars\Female31_closed_closed.jpg" />
+    <Resource Include="images\avatars\Female31_opened_closed.jpg" />
+    <Resource Include="images\avatars\Female31_opened_opened.jpg" />
+    <Resource Include="images\avatars\Female32_closed_closed.jpg" />
+    <Resource Include="images\avatars\Female32_opened_closed.jpg" />
+    <Resource Include="images\avatars\Female32_opened_opened.jpg" />
+    <Resource Include="images\avatars\Female33_closed_closed.jpg" />
+    <Resource Include="images\avatars\Female33_opened_closed.jpg" />
+    <Resource Include="images\avatars\Female33_opened_opened.jpg" />
+    <Resource Include="images\avatars\Female34_closed_closed.jpg" />
+    <Resource Include="images\avatars\Female34_opened_closed.jpg" />
+    <Resource Include="images\avatars\Female34_opened_opened.jpg" />
+    <Resource Include="images\avatars\Female35_closed_closed.jpg" />
+    <Resource Include="images\avatars\Female35_opened_closed.jpg" />
+    <Resource Include="images\avatars\Female35_opened_opened.jpg" />
+    <Resource Include="images\avatars\Female36_closed_closed.jpg" />
+    <Resource Include="images\avatars\Female36_opened_closed.jpg" />
+    <Resource Include="images\avatars\Female36_opened_opened.jpg" />
+    <Resource Include="images\avatars\Female37_closed_closed.jpg" />
+    <Resource Include="images\avatars\Female37_opened_closed.jpg" />
+    <Resource Include="images\avatars\Female37_opened_opened.jpg" />
+    <Resource Include="images\avatars\Female38_closed_closed.jpg" />
+    <Resource Include="images\avatars\Female38_opened_closed.jpg" />
+    <Resource Include="images\avatars\Female38_opened_opened.jpg" />
+    <Resource Include="images\avatars\Female39_closed_closed.jpg" />
+    <Resource Include="images\avatars\Female39_opened_closed.jpg" />
+    <Resource Include="images\avatars\Female39_opened_opened.jpg" />
+    <Resource Include="images\avatars\Female3_closed_closed.jpg" />
+    <Resource Include="images\avatars\Female3_opened_closed.jpg" />
+    <Resource Include="images\avatars\Female3_opened_opened.jpg" />
+    <Resource Include="images\avatars\Female40_closed_closed.jpg" />
+    <Resource Include="images\avatars\Female40_opened_closed.jpg" />
+    <Resource Include="images\avatars\Female40_opened_opened.jpg" />
+    <Resource Include="images\avatars\Female4_closed_closed.jpg" />
+    <Resource Include="images\avatars\Female4_opened_closed.jpg" />
+    <Resource Include="images\avatars\Female4_opened_opened.jpg" />
+    <Resource Include="images\avatars\Female5_closed_closed.jpg" />
+    <Resource Include="images\avatars\Female5_opened_closed.jpg" />
+    <Resource Include="images\avatars\Female5_opened_opened.jpg" />
+    <Resource Include="images\avatars\Female6_closed_closed.jpg" />
+    <Resource Include="images\avatars\Female6_opened_closed.jpg" />
+    <Resource Include="images\avatars\Female6_opened_opened.jpg" />
+    <Resource Include="images\avatars\Female7_closed_closed.jpg" />
+    <Resource Include="images\avatars\Female7_opened_closed.jpg" />
+    <Resource Include="images\avatars\Female7_opened_opened.jpg" />
+    <Resource Include="images\avatars\Female8_closed_closed.jpg" />
+    <Resource Include="images\avatars\Female8_opened_closed.jpg" />
+    <Resource Include="images\avatars\Female8_opened_opened.jpg" />
+    <Resource Include="images\avatars\Female9_closed_closed.jpg" />
+    <Resource Include="images\avatars\Female9_opened_closed.jpg" />
+    <Resource Include="images\avatars\Female9_opened_opened.jpg" />
+    <Resource Include="images\avatars\Male0_closed_closed.jpg" />
+    <Resource Include="images\avatars\Male0_opened_closed.jpg" />
+    <Resource Include="images\avatars\Male0_opened_opened.jpg" />
+    <Resource Include="images\avatars\Male10_closed_closed.jpg" />
+    <Resource Include="images\avatars\Male10_opened_closed.jpg" />
+    <Resource Include="images\avatars\Male10_opened_opened.jpg" />
+    <Resource Include="images\avatars\Male11_closed_closed.jpg" />
+    <Resource Include="images\avatars\Male11_opened_closed.jpg" />
+    <Resource Include="images\avatars\Male11_opened_opened.jpg" />
+    <Resource Include="images\avatars\Male12_closed_closed.jpg" />
+    <Resource Include="images\avatars\Male12_opened_closed.jpg" />
+    <Resource Include="images\avatars\Male12_opened_opened.jpg" />
+    <Resource Include="images\avatars\Male13_closed_closed.jpg" />
+    <Resource Include="images\avatars\Male13_opened_closed.jpg" />
+    <Resource Include="images\avatars\Male13_opened_opened.jpg" />
+    <Resource Include="images\avatars\Male14_closed_closed.jpg" />
+    <Resource Include="images\avatars\Male14_opened_closed.jpg" />
+    <Resource Include="images\avatars\Male14_opened_opened.jpg" />
+    <Resource Include="images\avatars\Male15_closed_closed.jpg" />
+    <Resource Include="images\avatars\Male15_opened_closed.jpg" />
+    <Resource Include="images\avatars\Male15_opened_opened.jpg" />
+    <Resource Include="images\avatars\Male16_closed_closed.jpg" />
+    <Resource Include="images\avatars\Male16_opened_closed.jpg" />
+    <Resource Include="images\avatars\Male16_opened_opened.jpg" />
+    <Resource Include="images\avatars\Male17_closed_closed.jpg" />
+    <Resource Include="images\avatars\Male17_opened_closed.jpg" />
+    <Resource Include="images\avatars\Male17_opened_opened.jpg" />
+    <Resource Include="images\avatars\Male18_closed_closed.jpg" />
+    <Resource Include="images\avatars\Male18_opened_closed.jpg" />
+    <Resource Include="images\avatars\Male18_opened_opened.jpg" />
+    <Resource Include="images\avatars\Male19_closed_closed.jpg" />
+    <Resource Include="images\avatars\Male19_opened_closed.jpg" />
+    <Resource Include="images\avatars\Male19_opened_opened.jpg" />
+    <Resource Include="images\avatars\Male1_closed_closed.jpg" />
+    <Resource Include="images\avatars\Male1_opened_closed.jpg" />
+    <Resource Include="images\avatars\Male1_opened_opened.jpg" />
+    <Resource Include="images\avatars\Male20_closed_closed.jpg" />
+    <Resource Include="images\avatars\Male20_opened_closed.jpg" />
+    <Resource Include="images\avatars\Male20_opened_opened.jpg" />
+    <Resource Include="images\avatars\Male21_closed_closed.jpg" />
+    <Resource Include="images\avatars\Male21_opened_closed.jpg" />
+    <Resource Include="images\avatars\Male21_opened_opened.jpg" />
+    <Resource Include="images\avatars\Male22_closed_closed.jpg" />
+    <Resource Include="images\avatars\Male22_opened_closed.jpg" />
+    <Resource Include="images\avatars\Male22_opened_opened.jpg" />
+    <Resource Include="images\avatars\Male23_closed_closed.jpg" />
+    <Resource Include="images\avatars\Male23_opened_closed.jpg" />
+    <Resource Include="images\avatars\Male23_opened_opened.jpg" />
+    <Resource Include="images\avatars\Male24_closed_closed.jpg" />
+    <Resource Include="images\avatars\Male24_opened_closed.jpg" />
+    <Resource Include="images\avatars\Male24_opened_opened.jpg" />
+    <Resource Include="images\avatars\Male25_closed_closed.jpg" />
+    <Resource Include="images\avatars\Male25_opened_closed.jpg" />
+    <Resource Include="images\avatars\Male25_opened_opened.jpg" />
+    <Resource Include="images\avatars\Male26_closed_closed.jpg" />
+    <Resource Include="images\avatars\Male26_opened_closed.jpg" />
+    <Resource Include="images\avatars\Male26_opened_opened.jpg" />
+    <Resource Include="images\avatars\Male27_closed_closed.jpg" />
+    <Resource Include="images\avatars\Male27_opened_closed.jpg" />
+    <Resource Include="images\avatars\Male27_opened_opened.jpg" />
+    <Resource Include="images\avatars\Male28_closed_closed.jpg" />
+    <Resource Include="images\avatars\Male28_opened_closed.jpg" />
+    <Resource Include="images\avatars\Male28_opened_opened.jpg" />
+    <Resource Include="images\avatars\Male29_closed_closed.jpg" />
+    <Resource Include="images\avatars\Male29_opened_closed.jpg" />
+    <Resource Include="images\avatars\Male29_opened_opened.jpg" />
+    <Resource Include="images\avatars\Male2_closed_closed.jpg" />
+    <Resource Include="images\avatars\Male2_opened_closed.jpg" />
+    <Resource Include="images\avatars\Male2_opened_opened.jpg" />
+    <Resource Include="images\avatars\Male30_closed_closed.jpg" />
+    <Resource Include="images\avatars\Male30_opened_closed.jpg" />
+    <Resource Include="images\avatars\Male30_opened_opened.jpg" />
+    <Resource Include="images\avatars\Male31_closed_closed.jpg" />
+    <Resource Include="images\avatars\Male31_opened_closed.jpg" />
+    <Resource Include="images\avatars\Male31_opened_opened.jpg" />
+    <Resource Include="images\avatars\Male32_closed_closed.jpg" />
+    <Resource Include="images\avatars\Male32_opened_closed.jpg" />
+    <Resource Include="images\avatars\Male32_opened_opened.jpg" />
+    <Resource Include="images\avatars\Male33_closed_closed.jpg" />
+    <Resource Include="images\avatars\Male33_opened_closed.jpg" />
+    <Resource Include="images\avatars\Male33_opened_opened.jpg" />
+    <Resource Include="images\avatars\Male34_closed_closed.jpg" />
+    <Resource Include="images\avatars\Male34_opened_closed.jpg" />
+    <Resource Include="images\avatars\Male34_opened_opened.jpg" />
+    <Resource Include="images\avatars\Male35_closed_closed.jpg" />
+    <Resource Include="images\avatars\Male35_opened_closed.jpg" />
+    <Resource Include="images\avatars\Male35_opened_opened.jpg" />
+    <Resource Include="images\avatars\Male36_closed_closed.jpg" />
+    <Resource Include="images\avatars\Male36_opened_closed.jpg" />
+    <Resource Include="images\avatars\Male36_opened_opened.jpg" />
+    <Resource Include="images\avatars\Male37_closed_closed.jpg" />
+    <Resource Include="images\avatars\Male37_opened_closed.jpg" />
+    <Resource Include="images\avatars\Male37_opened_opened.jpg" />
+    <Resource Include="images\avatars\Male38_closed_closed.jpg" />
+    <Resource Include="images\avatars\Male38_opened_closed.jpg" />
+    <Resource Include="images\avatars\Male38_opened_opened.jpg" />
+    <Resource Include="images\avatars\Male39_closed_closed.jpg" />
+    <Resource Include="images\avatars\Male39_opened_closed.jpg" />
+    <Resource Include="images\avatars\Male39_opened_opened.jpg" />
+    <Resource Include="images\avatars\Male3_closed_closed.jpg" />
+    <Resource Include="images\avatars\Male3_opened_closed.jpg" />
+    <Resource Include="images\avatars\Male3_opened_opened.jpg" />
+    <Resource Include="images\avatars\Male4_closed_closed.jpg" />
+    <Resource Include="images\avatars\Male4_opened_closed.jpg" />
+    <Resource Include="images\avatars\Male4_opened_opened.jpg" />
+    <Resource Include="images\avatars\Male5_closed_closed.jpg" />
+    <Resource Include="images\avatars\Male5_opened_closed.jpg" />
+    <Resource Include="images\avatars\Male5_opened_opened.jpg" />
+    <Resource Include="images\avatars\Male6_closed_closed.jpg" />
+    <Resource Include="images\avatars\Male6_opened_closed.jpg" />
+    <Resource Include="images\avatars\Male6_opened_opened.jpg" />
+    <Resource Include="images\avatars\Male7_closed_closed.jpg" />
+    <Resource Include="images\avatars\Male7_opened_closed.jpg" />
+    <Resource Include="images\avatars\Male7_opened_opened.jpg" />
+    <Resource Include="images\avatars\Male8_closed_closed.jpg" />
+    <Resource Include="images\avatars\Male8_opened_closed.jpg" />
+    <Resource Include="images\avatars\Male8_opened_opened.jpg" />
+    <Resource Include="images\avatars\Male9_closed_closed.jpg" />
+    <Resource Include="images\avatars\Male9_opened_closed.jpg" />
+    <Resource Include="images\avatars\Male9_opened_opened.jpg" />
+    <Resource Include="images\emotions\comfortable.png" />
+    <Resource Include="images\emotions\confident.png" />
+    <Resource Include="images\emotions\disappointed.png" />
+    <Resource Include="images\emotions\neutral.png" />
+    <Resource Include="images\emotions\puzzled.png" />
+    <Resource Include="images\emotions\uncomfortable.png" />
+    <Resource Include="images\emotions\worried.png" />
+    <Content Include="ServiceReferences.ClientConfig" />
+    <None Include="Service References\ActivityLogService\ActivityLogService.wsdl" />
+    <None Include="Service References\ActivityLogService\ActivityLogService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ActivityLogService\ActivityLogService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ActivityLogService\ActivityLogService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VCS.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ActivityLogService\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

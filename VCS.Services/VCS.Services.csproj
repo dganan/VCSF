@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6652F94D-F1F9-4F55-B909-21865BE9C056}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VCS.Services</RootNamespace>
+    <AssemblyName>VCS.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>VCS.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\references\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="IvanAkcheurov.NClassify, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1faa374c09432dc8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\references\IvanAkcheurov.NClassify.dll</HintPath>
+    </Reference>
+    <Reference Include="IvanAkcheurov.NTextCat.Lib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1faa374c09432dc8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\references\IvanAkcheurov.NTextCat.Lib.dll</HintPath>
+    </Reference>
+    <Reference Include="IvanAkcheurov.NTextCat.Lib.Legacy, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1faa374c09432dc8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\references\IvanAkcheurov.NTextCat.Lib.Legacy.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PowerCollections, Version=1.0.2141.24679, Culture=neutral, PublicKeyToken=54fb049634b23d81, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\references\PowerCollections.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ActivityLogService\ActivityLogService.svc" />
+    <Content Include="SpeechActClassificationService\SpeechActClassificationService.svc" />
+    <Content Include="ConversionService\ConversionService.svc" />
+    <Content Include="CrossDomain.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="KeywordsRepositoryService\KeywordsRepositoryService.svc" />
+    <Content Include="SLORepositoryService\SLORepositoryService.svc" />
+    <Content Include="SpeechService\SpeechService.svc" />
+    <Content Include="videos\boredom_cat.wmv" />
+    <Content Include="videos\boredom_en.wmv" />
+    <Content Include="videos\confussion_cat.wmv" />
+    <Content Include="videos\confussion_en.wmv" />
+    <Content Include="videos\disinterest_cat.wmv" />
+    <Content Include="videos\disinterest_en.wmv" />
+    <Content Include="videos\enjoyment_cat.wmv" />
+    <Content Include="videos\enjoyment_en.wmv" />
+    <Content Include="videos\flow_cat.wmv" />
+    <Content Include="videos\flow_en.wmv" />
+    <Content Include="videos\hopefulness_cat.wmv" />
+    <Content Include="videos\hopefulness_en.wmv" />
+    <Content Include="videos\mixed_cat.wmv" />
+    <Content Include="videos\mixed_en.wmv" />
+    <Content Include="videos\puzzlement_cat.wmv" />
+    <Content Include="videos\puzzlement_en.wmv" />
+    <Content Include="videos\relaxation_cat.wmv" />
+    <Content Include="videos\relaxation_en.wmv" />
+    <Content Include="videos\sadness_cat.wmv" />
+    <Content Include="videos\sadness_en.wmv" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActivityLogService\Activity.cs" />
+    <Compile Include="ActivityLogService\ActivityLogService.svc.cs">
+      <DependentUpon>ActivityLogService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="ActivityLogService\Argument.cs" />
+    <Compile Include="ActivityLogService\IActivityLogService.cs" />
+    <Compile Include="SpeechActClassificationService\SpeechActClassificationService.svc.cs">
+      <DependentUpon>SpeechActClassificationService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="SpeechActClassificationService\ISpeechActClassificationService.cs" />
+    <Compile Include="KeywordsRepositoryService\IKeywordsRepositoryService.cs" />
+    <Compile Include="KeywordsRepositoryService\KeywordsRepositoryContentIO.cs" />
+    <Compile Include="KeywordsRepositoryService\KeywordsRepositoryService.svc.cs">
+      <DependentUpon>KeywordsRepositoryService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="ReferencePreservingDataContractFormatAttribute.cs" />
+    <Compile Include="ConversionService\ConversionService.svc.cs">
+      <DependentUpon>ConversionService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="ConversionService\HtmlRemoval.cs" />
+    <Compile Include="ConversionService\IConversionService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReferencePreservingDataContractSerializerOperationBehavior.cs" />
+    <Compile Include="SLORepositoryService\ISLORepositoryService.cs" />
+    <Compile Include="SLORepositoryService\RepositoryContentIO.cs" />
+    <Compile Include="SLORepositoryService\SLORepositoryService.svc.cs">
+      <DependentUpon>SLORepositoryService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="SpeechService\ISpeechService.cs" />
+    <Compile Include="SpeechService\Speech.cs" />
+    <Compile Include="SpeechService\SpeechService.svc.cs">
+      <DependentUpon>SpeechService.svc</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IwtForumConverter\Moma.IwtForumConverter.csproj">
+      <Project>{033A7B2C-A57C-4096-ACEB-0E235BD97ADD}</Project>
+      <Name>Moma.IwtForumConverter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SpeechActClassification\SpeechActClassification.csproj">
+      <Project>{80CE083F-7B83-4459-A552-A0988649E884}</Project>
+      <Name>SpeechActClassification</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VCS.Common\VCS.Common.csproj">
+      <Project>{BCEABFA8-AE43-4AE3-9DD2-068B5EA5157E}</Project>
+      <Name>VCS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VCS.ConversionLayer\VCS.ConversionLayer.csproj">
+      <Project>{9A5E613A-BB19-4B74-8113-C1FFED54A7D4}</Project>
+      <Name>VCS.ConversionLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VCS.CS2Model\VCS.CS2Model.csproj">
+      <Project>{5DCA0BE3-4BDF-4B6D-9982-8C55C1CA5A3D}</Project>
+      <Name>VCS.CS2Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VCS.CS2toSLO\VCS.CS2toSLO.csproj">
+      <Project>{FAFC707D-8054-4E39-9DBB-30E4EFFBD550}</Project>
+      <Name>VCS.CS2toSLO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VCS.PhpBBForumsDirectDBConverter\VCS.PhpBBForumsDirectDBConverter.csproj">
+      <Project>{7C829AC0-8642-4C26-9A9A-33DFCC4D1D00}</Project>
+      <Name>VCS.PhpBBForumsDirectDBConverter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VCS.PhpBBForumsUOCConverter\VCS.PhpBBForumsUOCConverter.csproj">
+      <Project>{05C59EF9-357D-4305-9EEB-2BEFFD90B559}</Project>
+      <Name>VCS.PhpBBForumsUOCConverter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VCS.SLOModel\VCS.SLOModel.csproj">
+      <Project>{08C38215-5A9C-4DB1-8BBA-1A22355E8101}</Project>
+      <Name>VCS.SLOModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VCS.TestConverter\VCS.TestConverter.csproj">
+      <Project>{E5C34DFD-ACEA-4B4A-8BC3-15F4CAF64F85}</Project>
+      <Name>VCS.TestConverter</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\Profile1.pubxml" />
+    <None Include="VCS.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="SpeechLib">
+      <Guid>{D3C4A7F2-7D27-4332-B41F-593D71E16DB1}</Guid>
+      <VersionMajor>11</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2437</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

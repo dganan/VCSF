@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FAFC707D-8054-4E39-9DBB-30E4EFFBD550}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VCS</RootNamespace>
+    <AssemblyName>VCS.VCSCreator</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>VCS.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IvanAkcheurov.NTextCat.Lib">
+      <HintPath>..\references\IvanAkcheurov.NTextCat.Lib.dll</HintPath>
+    </Reference>
+    <Reference Include="IvanAkcheurov.NTextCat.Lib.Legacy, Version=1.0.0.0, Culture=neutral, PublicKeyToken=54fb049634b23d81, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\references\IvanAkcheurov.NTextCat.Lib.Legacy.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnimationAvatarExtension.cs" />
+    <Compile Include="CS2toSLO.cs" />
+    <Compile Include="GenderGuesser.cs" />
+    <Compile Include="LanguageGesser.cs" />
+    <Compile Include="PostProcessor.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SpeechActClassification\SpeechActClassification.csproj">
+      <Project>{80CE083F-7B83-4459-A552-A0988649E884}</Project>
+      <Name>SpeechActClassification</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VCS.Common\VCS.Common.csproj">
+      <Project>{BCEABFA8-AE43-4AE3-9DD2-068B5EA5157E}</Project>
+      <Name>VCS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VCS.CS2Model\VCS.CS2Model.csproj">
+      <Project>{5DCA0BE3-4BDF-4B6D-9982-8C55C1CA5A3D}</Project>
+      <Name>VCS.CS2Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VCS.SLOModel\VCS.SLOModel.csproj">
+      <Project>{08C38215-5A9C-4DB1-8BBA-1A22355E8101}</Project>
+      <Name>VCS.SLOModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="VCS.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

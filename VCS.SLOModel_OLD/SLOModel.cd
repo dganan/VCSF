@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="VCS.Character">
+    <Position X="6" Y="3.25" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAEAABAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Character.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VCS.DialogScenePart">
+    <Position X="6" Y="1" Width="1.5" />
+    <Members>
+      <Method Name="DialogScenePart" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="Character" Type="VCS.Character" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.742" Y="2.617" />
+        <Point X="6.742" Y="3.25" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="EmotionalState" Type="VCS.EmotionalState" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.5" Y="2.062" />
+        <Point X="8.25" Y="2.062" />
+        <Point X="8.25" Y="3" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAIAAAAAAAAAAIAAAAAAAAAAAAEAAAACAA=</HashCode>
+      <FileName>DialogScenePart.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Character" />
+      <Property Name="EmotionalState" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="VCS.Scene" Collapsed="true">
+    <Position X="1" Y="3" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Scene.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VCS.ConditionalScene" Collapsed="true">
+    <Position X="3" Y="3.5" Width="1.5" />
+    <InheritanceLine Type="VCS.Scene" FixedFromPoint="true">
+      <Path>
+        <Point X="2.25" Y="3.375" />
+        <Point X="2.625" Y="3.375" />
+        <Point X="2.625" Y="3.846" />
+        <Point X="3" Y="3.846" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ConditionalScene.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VCS.AssessmentScene" Collapsed="true">
+    <Position X="3" Y="2.5" Width="1.5" />
+    <InheritanceLine Type="VCS.Scene" FixedFromPoint="true">
+      <Path>
+        <Point X="2.25" Y="3.375" />
+        <Point X="2.625" Y="3.375" />
+        <Point X="2.625" Y="2.846" />
+        <Point X="3" Y="2.846" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AssessmentScene.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VCS.VideoScene" Collapsed="true">
+    <Position X="3" Y="4.5" Width="1.5" />
+    <InheritanceLine Type="VCS.Scene" FixedFromPoint="true">
+      <Path>
+        <Point X="2.25" Y="3.375" />
+        <Point X="2.625" Y="3.375" />
+        <Point X="2.625" Y="4.846" />
+        <Point X="3" Y="4.846" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>VideoScene.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VCS.DialogScene" Collapsed="true">
+    <Position X="3" Y="1.5" Width="1.5" />
+    <InheritanceLine Type="VCS.Scene" FixedFromPoint="true">
+      <Path>
+        <Point X="2.25" Y="3.375" />
+        <Point X="2.625" Y="3.375" />
+        <Point X="2.625" Y="1.846" />
+        <Point X="3" Y="1.846" />
+      </Path>
+    </InheritanceLine>
+    <AssociationLine Name="Characters" Type="VCS.Character" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.5" Y="2" />
+        <Point X="4.875" Y="2" />
+        <Point X="4.875" Y="3.812" />
+        <Point X="6" Y="3.812" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="DialogSceneParts" Type="VCS.DialogScenePart" FixedToPoint="true">
+      <Path>
+        <Point X="4.5" Y="1.688" />
+        <Point X="6" Y="1.688" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>DialogScene.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Characters" />
+      <Property Name="DialogSceneParts" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Enum Name="VCS.EmotionalState">
+    <Position X="7.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAABAAAAAAAAAAAAQAIAAQAACAAAAEABAA=</HashCode>
+      <FileName>EmotionalState.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

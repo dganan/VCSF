@@ -1,0 +1,31 @@
+﻿<configuration>
+  <system.serviceModel>
+    <bindings>
+      <basicHttpBinding>
+        <binding name="BasicHttpBinding_IConversionService" maxBufferSize="2147483647"
+          maxReceivedMessageSize="2147483647">
+          <security mode="None" />
+        </binding>
+        <binding name="BasicHttpBinding_IActivityLogService" maxBufferSize="2147483647"
+          maxReceivedMessageSize="2147483647">
+          <security mode="None" />
+        </binding>
+        <binding name="BasicHttpBinding_ISLORepositoryService" maxBufferSize="2147483647"
+          maxReceivedMessageSize="2147483647">
+          <security mode="None" />
+        </binding>
+      </basicHttpBinding>
+    </bindings>
+    <client>
+      <endpoint address="http://localhost/VCS.Services/ConversionService/ConversionService.svc"
+        binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IConversionService"
+        contract="ConversionService.IConversionService" name="BasicHttpBinding_IConversionService" />
+      <endpoint address="http://localhost/VCS.Services/ActivityLogService/ActivityLogService.svc"
+        binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IActivityLogService"
+        contract="ActivityLogService.IActivityLogService" name="BasicHttpBinding_IActivityLogService" />
+      <endpoint address="http://localhost/VCS.Services/SLORepositoryService/SLORepositoryService.svc"
+        binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_ISLORepositoryService"
+        contract="SLORepositoryService.ISLORepositoryService" name="BasicHttpBinding_ISLORepositoryService" />
+    </client>
+  </system.serviceModel>
+</configuration>

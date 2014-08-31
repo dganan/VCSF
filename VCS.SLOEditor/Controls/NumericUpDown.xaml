@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="VCS.NumericUpDown"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="40" d:DesignWidth="200">
+    <StackPanel Orientation="Horizontal">
+        <Button Margin="5,5,0,5" Name="DecreaseFast" Click="DecreaseFast_Click" ToolTipService.ToolTip="Decrease 1">
+            <Image Source="/VCS.SLOEditor;component/images/all_to_left.png" Width="16" Height="16"></Image>
+        </Button>
+        <Button Margin="5,5,0,5" Name="DecreaseSlow" Click="DecreaseSlow_Click" ToolTipService.ToolTip="Decrease 0.1">
+            <Image Source="/VCS.SLOEditor;component/images/to_left.png" Width="16" Height="16"></Image>
+        </Button>
+        <TextBox Width="50" Margin="5,5,0,5" IsEnabled="false" Name="tbValue"></TextBox>
+        <Button Margin="5,5,0,5" Name="IncreaseSlow" Click="IncreaseSlow_Click" ToolTipService.ToolTip="Increase 0.1">
+            <Image Source="/VCS.SLOEditor;component/images/to_right.png" Width="16" Height="16"></Image>
+        </Button>
+        <Button Margin="5" Name="IncreaseFast" Click="IncreaseFast_Click" ToolTipService.ToolTip="Increase 1">
+            <Image Source="/VCS.SLOEditor;component/images/all_to_right.png" Width="16" Height="16"></Image>
+        </Button>
+
+    </StackPanel>
+</UserControl>

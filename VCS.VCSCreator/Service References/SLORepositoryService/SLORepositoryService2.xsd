@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/VCS" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/VCS" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/VCS.Services/SLORepositoryService/SLORepositoryService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://localhost/VCS.Services/SLORepositoryService/SLORepositoryService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="ArrayOfSLODescriptor">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SLODescriptor" nillable="true" type="tns:SLODescriptor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSLODescriptor" nillable="true" type="tns:ArrayOfSLODescriptor" />
+  <xs:complexType name="SLODescriptor">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SLOElement">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SLODescriptor" nillable="true" type="tns:SLODescriptor" />
+  <xs:complexType name="SLOElement">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="SLOElement" nillable="true" type="tns:SLOElement" />
+  <xs:complexType name="SLO">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SLOElement">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ActivityWeight" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="Characters" nillable="true" type="tns:ArrayOfCharacter" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PassivityWeight" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="QualityWeight" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="Scenes" nillable="true" type="tns:ArrayOfScene" />
+          <xs:element minOccurs="0" name="SourceUrl" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SLO" nillable="true" type="tns:SLO" />
+  <xs:complexType name="ArrayOfCharacter">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Character" nillable="true" type="tns:Character" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCharacter" nillable="true" type="tns:ArrayOfCharacter" />
+  <xs:complexType name="Character">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SLOElement">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Activity" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="Age" type="tns:Age" />
+          <xs:element minOccurs="0" name="AnimationAvatar" type="tns:AnimationAvatar" />
+          <xs:element minOccurs="0" name="Gender" type="tns:Gender" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Passivity" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="PhotoAvatar" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="Quality" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="UseAnimatedAvatar" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Character" nillable="true" type="tns:Character" />
+  <xs:simpleType name="Age">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Adult" />
+      <xs:enumeration value="Child" />
+      <xs:enumeration value="Senior" />
+      <xs:enumeration value="Teen" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Age" nillable="true" type="tns:Age" />
+  <xs:simpleType name="AnimationAvatar">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Female0" />
+      <xs:enumeration value="Female1" />
+      <xs:enumeration value="Female2" />
+      <xs:enumeration value="Female3" />
+      <xs:enumeration value="Female4" />
+      <xs:enumeration value="Female5" />
+      <xs:enumeration value="Female6" />
+      <xs:enumeration value="Female7" />
+      <xs:enumeration value="Female8" />
+      <xs:enumeration value="Female9" />
+      <xs:enumeration value="Female10" />
+      <xs:enumeration value="Female11" />
+      <xs:enumeration value="Female12" />
+      <xs:enumeration value="Female13" />
+      <xs:enumeration value="Female14" />
+      <xs:enumeration value="Female15" />
+      <xs:enumeration value="Female16" />
+      <xs:enumeration value="Female17" />
+      <xs:enumeration value="Female18" />
+      <xs:enumeration value="Female19" />
+      <xs:enumeration value="Female20" />
+      <xs:enumeration value="Female21" />
+      <xs:enumeration value="Female22" />
+      <xs:enumeration value="Female23" />
+      <xs:enumeration value="Female24" />
+      <xs:enumeration value="Female25" />
+      <xs:enumeration value="Female26" />
+      <xs:enumeration value="Female27" />
+      <xs:enumeration value="Female28" />
+      <xs:enumeration value="Female29" />
+      <xs:enumeration value="Female30" />
+      <xs:enumeration value="Female31" />
+      <xs:enumeration value="Female32" />
+      <xs:enumeration value="Female33" />
+      <xs:enumeration value="Female34" />
+      <xs:enumeration value="Female35" />
+      <xs:enumeration value="Female36" />
+      <xs:enumeration value="Female37" />
+      <xs:enumeration value="Female38" />
+      <xs:enumeration value="Female39" />
+      <xs:enumeration value="Female40" />
+      <xs:enumeration value="Male0" />
+      <xs:enumeration value="Male1" />
+      <xs:enumeration value="Male2" />
+      <xs:enumeration value="Male3" />
+      <xs:enumeration value="Male4" />
+      <xs:enumeration value="Male5" />
+      <xs:enumeration value="Male6" />
+      <xs:enumeration value="Male7" />
+      <xs:enumeration value="Male8" />
+      <xs:enumeration value="Male9" />
+      <xs:enumeration value="Male10" />
+      <xs:enumeration value="Male11" />
+      <xs:enumeration value="Male12" />
+      <xs:enumeration value="Male13" />
+      <xs:enumeration value="Male14" />
+      <xs:enumeration value="Male15" />
+      <xs:enumeration value="Male16" />
+      <xs:enumeration value="Male17" />
+      <xs:enumeration value="Male18" />
+      <xs:enumeration value="Male19" />
+      <xs:enumeration value="Male20" />
+      <xs:enumeration value="Male21" />
+      <xs:enumeration value="Male22" />
+      <xs:enumeration value="Male23" />
+      <xs:enumeration value="Male24" />
+      <xs:enumeration value="Male25" />
+      <xs:enumeration value="Male26" />
+      <xs:enumeration value="Male27" />
+      <xs:enumeration value="Male28" />
+      <xs:enumeration value="Male29" />
+      <xs:enumeration value="Male30" />
+      <xs:enumeration value="Male31" />
+      <xs:enumeration value="Male32" />
+      <xs:enumeration value="Male33" />
+      <xs:enumeration value="Male34" />
+      <xs:enumeration value="Male35" />
+      <xs:enumeration value="Male36" />
+      <xs:enumeration value="Male37" />
+      <xs:enumeration value="Male38" />
+      <xs:enumeration value="Male39" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AnimationAvatar" nillable="true" type="tns:AnimationAvatar" />
+  <xs:simpleType name="Gender">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Neutral" />
+      <xs:enumeration value="Female" />
+      <xs:enumeration value="Male" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Gender" nillable="true" type="tns:Gender" />
+  <xs:complexType name="ArrayOfScene">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Scene" nillable="true" type="tns:Scene" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfScene" nillable="true" type="tns:ArrayOfScene" />
+  <xs:complexType name="Scene">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SLOElement">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsEndScene" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Order" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Scene" nillable="true" type="tns:Scene" />
+  <xs:complexType name="VideoScene">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Scene">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VideoScene" nillable="true" type="tns:VideoScene" />
+  <xs:complexType name="ReferencesScene">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Scene">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Character" nillable="true" type="tns:Character" />
+          <xs:element minOccurs="0" name="References" nillable="true" type="tns:ArrayOfReferencesSceneReference" />
+          <xs:element minOccurs="0" name="SpeechAudio" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="SpeechText" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ReferencesScene" nillable="true" type="tns:ReferencesScene" />
+  <xs:complexType name="ArrayOfReferencesSceneReference">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ReferencesSceneReference" nillable="true" type="tns:ReferencesSceneReference" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfReferencesSceneReference" nillable="true" type="tns:ArrayOfReferencesSceneReference" />
+  <xs:complexType name="ReferencesSceneReference">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ScenePart">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ReferencesSceneReference" nillable="true" type="tns:ReferencesSceneReference" />
+  <xs:complexType name="ScenePart">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SLOElement">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ScenePart" nillable="true" type="tns:ScenePart" />
+  <xs:complexType name="EmotionalTestScene">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Scene">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DefaultNextSceneToJump" nillable="true" type="tns:Scene" />
+          <xs:element minOccurs="0" name="EmotionFeelDuringQuestion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EmotionFeelExperiencedQuestion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EmotionFeelNowQuestion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EmotionalTestType" type="tns:EmotionalTestType" />
+          <xs:element minOccurs="0" name="GenevaWheelQuestion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MoodQuestion" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EmotionalTestScene" nillable="true" type="tns:EmotionalTestScene" />
+  <xs:simpleType name="EmotionalTestType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Mood" />
+      <xs:enumeration value="Emotional" />
+      <xs:enumeration value="Geneva_Wheel" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EmotionalTestType" nillable="true" type="tns:EmotionalTestType" />
+  <xs:complexType name="AssessmentScene">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Scene">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DefaultEnd" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DefaultFeedbackMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DefaultSceneToJump" nillable="true" type="tns:Scene" />
+          <xs:element minOccurs="0" name="EnableRandomization" type="xs:boolean" />
+          <xs:element minOccurs="0" name="JumpRules" nillable="true" type="tns:ArrayOfAssessmentJumpRule" />
+          <xs:element minOccurs="0" name="Questions" nillable="true" type="tns:ArrayOfAssessmentSceneQuestion" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AssessmentScene" nillable="true" type="tns:AssessmentScene" />
+  <xs:complexType name="ArrayOfAssessmentJumpRule">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AssessmentJumpRule" nillable="true" type="tns:AssessmentJumpRule" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAssessmentJumpRule" nillable="true" type="tns:ArrayOfAssessmentJumpRule" />
+  <xs:complexType name="AssessmentJumpRule">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CheckNumberOfIterations" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CheckPrerequisites" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CheckTestResult" type="xs:boolean" />
+      <xs:element minOccurs="0" name="End" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FeedbackMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MaxNumberOfIterations" type="xs:int" />
+      <xs:element minOccurs="0" name="MaxResult" type="xs:double" />
+      <xs:element minOccurs="0" name="MaxResultIncluded" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MeetsPrerequisites" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MinNumberOfIterations" type="xs:int" />
+      <xs:element minOccurs="0" name="MinResult" type="xs:double" />
+      <xs:element minOccurs="0" name="MinResultIncluded" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SceneToJump" nillable="true" type="tns:Scene" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="AssessmentJumpRule" nillable="true" type="tns:AssessmentJumpRule" />
+  <xs:complexType name="ArrayOfAssessmentSceneQuestion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AssessmentSceneQuestion" nillable="true" type="tns:AssessmentSceneQuestion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAssessmentSceneQuestion" nillable="true" type="tns:ArrayOfAssessmentSceneQuestion" />
+  <xs:complexType name="AssessmentSceneQuestion">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ScenePart">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Answers" nillable="true" type="tns:ArrayOfAnswer" />
+          <xs:element minOccurs="0" name="EnableMultipleAnswers" type="xs:boolean" />
+          <xs:element minOccurs="0" name="EnableRandomization" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Evaluator" nillable="true" type="tns:Character" />
+          <xs:element minOccurs="0" name="QuestionSpeech" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="QuestionText" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Score" type="xs:double" />
+          <xs:element minOccurs="0" name="SpeechAudio" nillable="true" type="xs:base64Binary" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AssessmentSceneQuestion" nillable="true" type="tns:AssessmentSceneQuestion" />
+  <xs:complexType name="ArrayOfAnswer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Answer" nillable="true" type="tns:Answer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAnswer" nillable="true" type="tns:ArrayOfAnswer" />
+  <xs:complexType name="Answer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SLOElement">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AnswerText" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsCorrectAnswer" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Answer" nillable="true" type="tns:Answer" />
+  <xs:complexType name="DialogScene">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Scene">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DialogSceneParts" nillable="true" type="tns:ArrayOfDialogScenePart" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DialogScene" nillable="true" type="tns:DialogScene" />
+  <xs:complexType name="ArrayOfDialogScenePart">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DialogScenePart" nillable="true" type="tns:DialogScenePart" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDialogScenePart" nillable="true" type="tns:ArrayOfDialogScenePart" />
+  <xs:complexType name="DialogScenePart">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ScenePart">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Character" nillable="true" type="tns:Character" />
+          <xs:element minOccurs="0" name="DeferredEmotionalState" type="tns:EmotionDeferred" />
+          <xs:element minOccurs="0" name="EmotionalState" type="tns:Emoticon" />
+          <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Keywords" nillable="true" type="q1:ArrayOfstring" />
+          <xs:element minOccurs="0" name="Language" type="tns:Language" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SpecialMarks" nillable="true" type="tns:ArrayOfDialogSpecialMark" />
+          <xs:element minOccurs="0" name="Speech" nillable="true" type="xs:string" />
+          <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="SpeechActs" nillable="true" type="q2:ArrayOfstring" />
+          <xs:element minOccurs="0" name="SpeechAudio" nillable="true" type="xs:base64Binary" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DialogScenePart" nillable="true" type="tns:DialogScenePart" />
+  <xs:simpleType name="EmotionDeferred">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Confident" />
+      <xs:enumeration value="Comfortable" />
+      <xs:enumeration value="Puzzled" />
+      <xs:enumeration value="Neutral" />
+      <xs:enumeration value="Worried" />
+      <xs:enumeration value="Uncomfortable" />
+      <xs:enumeration value="Disappointed" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EmotionDeferred" nillable="true" type="tns:EmotionDeferred" />
+  <xs:simpleType name="Emoticon">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Normal" />
+      <xs:enumeration value="Happy" />
+      <xs:enumeration value="Sad" />
+      <xs:enumeration value="Angry" />
+      <xs:enumeration value="Worried" />
+      <xs:enumeration value="Surprised" />
+      <xs:enumeration value="Devilish" />
+      <xs:enumeration value="Crying" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Emoticon" nillable="true" type="tns:Emoticon" />
+  <xs:simpleType name="Language">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="English">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">0</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Spanish">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Catalan">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Italian">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Language" nillable="true" type="tns:Language" />
+  <xs:complexType name="ArrayOfDialogSpecialMark">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DialogSpecialMark" type="tns:DialogSpecialMark" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDialogSpecialMark" nillable="true" type="tns:ArrayOfDialogSpecialMark" />
+  <xs:simpleType name="DialogSpecialMark">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Accept" />
+      <xs:enumeration value="Cancel" />
+      <xs:enumeration value="Question" />
+      <xs:enumeration value="Exclamation" />
+      <xs:enumeration value="medal_gold" />
+      <xs:enumeration value="medal_silver" />
+      <xs:enumeration value="medal_bronze" />
+      <xs:enumeration value="medal_first" />
+      <xs:enumeration value="star_black" />
+      <xs:enumeration value="star_blue" />
+      <xs:enumeration value="star_gold" />
+      <xs:enumeration value="star_green" />
+      <xs:enumeration value="star_orange" />
+      <xs:enumeration value="star_purple" />
+      <xs:enumeration value="star_red" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DialogSpecialMark" nillable="true" type="tns:DialogSpecialMark" />
+</xs:schema>

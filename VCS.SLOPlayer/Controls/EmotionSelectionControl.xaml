@@ -1,0 +1,176 @@
+﻿<UserControl x:Class="VCS.EmotionSelectionControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Toolkit"
+    mc:Ignorable="d"
+     d:DesignWidth="700" d:DesignHeight="500">
+    <toolkit:DockPanel LastChildFill="False">
+        <TextBlock toolkit:DockPanel.Dock="Top" x:Name="FeelNowTitleText" FontSize="16" FontWeight="Bold" Height="20" Margin="10" HorizontalAlignment="left">How do you feel now?</TextBlock>
+        <StackPanel toolkit:DockPanel.Dock="Top" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Background="Transparent" BorderThickness="0" Grid.Column="1" Name="FeelNowSadButton" Click="FeelNowButton_Click" Tag="Sad" BorderBrush="Red">
+                <StackPanel>
+                    <Image Width="50" Height="50" Source="/VCS.SLOToolsLib;component/images/emotions/sad.jpg"></Image>
+                    <TextBlock Name="FeelNowSadText" HorizontalAlignment="Center" FontSize="12" Margin="5" FontWeight="Bold" Foreground="#990000">Sad</TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Background="Transparent" BorderThickness="0" Grid.Column="1" Name="FeelNowUnhappyButton" Click="FeelNowButton_Click" Tag="Unhappy" BorderBrush="Red">
+                <StackPanel>
+                    <Image Width="50" Height="50" Source="/VCS.SLOToolsLib;component/images/emotions/unhappy.jpg"></Image>
+                    <TextBlock Name="FeelNowUnhappyText" HorizontalAlignment="Center" FontSize="12" Margin="5" FontWeight="Bold" Foreground="#FF0000">Unhappy</TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Background="Transparent" BorderThickness="0" Name="FeelNowNeutralButton" Grid.Row="1" Click="FeelNowButton_Click" Tag="Neutral" BorderBrush="Red">
+                <StackPanel>
+                    <Image Width="50" Height="50" Source="/VCS.SLOToolsLib;component/images/emotions/neutral.jpg"></Image>
+                    <TextBlock Name="FeelNowNeutralText" HorizontalAlignment="Center" FontSize="12" Margin="5" FontWeight="Bold" Foreground="#BBBB00">Neutral</TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Background="Transparent" BorderThickness="0" Grid.Column="2" Name="FeelNowHappyButton" Grid.Row="1" Click="FeelNowButton_Click" Tag="Happy" BorderBrush="Red">
+                <StackPanel>
+                    <Image Width="50" Height="50" Source="/VCS.SLOToolsLib;component/images/emotions/happy.jpg"></Image>
+                    <TextBlock Name="FeelNowHappyText" HorizontalAlignment="Center" FontSize="12" Margin="5" FontWeight="Bold" Foreground="#99CC00">Happy</TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Background="Transparent" BorderThickness="0" Grid.Column="3" Name="FeelNowVeryHappyButton" Grid.Row="1" Click="FeelNowButton_Click" Tag="Very_happy" BorderBrush="Red">
+                <StackPanel>
+                    <Image Width="50" Height="50" Source="/VCS.SLOToolsLib;component/images/emotions/very_happy.jpg"></Image>
+                    <TextBlock Name="FeelNowVeryHappyText" HorizontalAlignment="Center" FontSize="12" Margin="5" FontWeight="Bold" Foreground="#009900">Very happy</TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Background="Transparent" BorderThickness="0" Grid.Column="1" Name="FeelNowOtherButton" Grid.Row="2" Click="FeelNowButton_Click" Tag="Other" BorderBrush="Red" Visibility="Collapsed" >
+                <StackPanel>
+                    <Image Width="50" Height="50" Source="/VCS.SLOToolsLib;component/images/emotions/other.jpg"></Image>
+                    <TextBlock HorizontalAlignment="Center" FontSize="14" FontWeight="Bold" Margin="5" Foreground="#0055FF">Other</TextBlock>
+                </StackPanel>
+            </Button>
+            <StackPanel Name="FeelNowOtherTextBoxPanel" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Center" Visibility="Collapsed" Margin="10">
+                <TextBlock HorizontalAlignment="Center" FontSize="14" FontWeight="Bold" Margin="5" Foreground="#0055FF">Type:</TextBlock>
+                <TextBox Name="FeelNowOtherTextBox" Width="150"></TextBox>
+            </StackPanel>
+        </StackPanel>
+        <TextBlock toolkit:DockPanel.Dock="Top" x:Name="FeelDuringTitleText" FontSize="16" FontWeight="Bold" Height="20" Margin="10,20,10,10" HorizontalAlignment="left">During the SLO reproduction?</TextBlock>
+        <StackPanel toolkit:DockPanel.Dock="Top" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Background="Transparent" BorderThickness="0" Grid.Column="3" Name="FeelDuringSleepyButton" Click="FeelDuringButton_Click" Tag="Sleepy" BorderBrush="Red">
+                <StackPanel>
+                    <Image Width="50" Height="50" Source="/VCS.SLOToolsLib;component/images/emotions/sleepy.jpg"></Image>
+                    <TextBlock Name="FeelDuringSleepyText" HorizontalAlignment="Center" FontSize="12" Margin="5" FontWeight="Bold" Foreground="#FF0000">Sleepy</TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Background="Transparent" BorderThickness="0" Grid.Column="2" Name="FeelDuringBoredButton" Click="FeelDuringButton_Click" Tag="Bored" BorderBrush="Red">
+                <StackPanel>
+                    <Image Width="50" Height="50" Source="/VCS.SLOToolsLib;component/images/emotions/bored.jpg"></Image>
+                    <TextBlock Name="FeelDuringBoredText" HorizontalAlignment="Center" FontSize="12" Margin="5" FontWeight="Bold" Foreground="#FF6600">Bored</TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Background="Transparent" BorderThickness="0" Grid.Column="2" Name="FeelDuringTiredButton" Click="FeelDuringButton_Click" Tag="Tired" BorderBrush="Red">
+                <StackPanel>
+                    <Image Width="50" Height="50" Source="/VCS.SLOToolsLib;component/images/emotions/tired.jpg"></Image>
+                    <TextBlock Name="FeelDuringTiredText" HorizontalAlignment="Center" FontSize="12" Margin="5" FontWeight="Bold" Foreground="#FF9900">Tired</TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Background="Transparent" BorderThickness="0" Name="FeelDuringNeutralButton" Grid.Row="1" Click="FeelDuringButton_Click" Tag="Neutral" BorderBrush="Red">
+                <StackPanel>
+                    <Image Width="50" Height="50" Source="/VCS.SLOToolsLib;component/images/emotions/neutral.jpg"></Image>
+                    <TextBlock Name="FeelDuringNeutralText" HorizontalAlignment="Center" FontSize="12" Margin="5" FontWeight="Bold" Foreground="#BBBB00">Neutral</TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Background="Transparent" BorderThickness="0" Grid.Column="1" Name="FeelDuringRelaxedButton" Grid.Row="1" Click="FeelDuringButton_Click" Tag="Relaxed" BorderBrush="Red">
+                <StackPanel>
+                    <Image Width="50" Height="50" Source="/VCS.SLOToolsLib;component/images/emotions/relaxed.jpg"></Image>
+                    <TextBlock Name="FeelDuringRelaxedText" HorizontalAlignment="Center" FontSize="12" Margin="5" FontWeight="Bold" Foreground="#00CC99">Relaxed</TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Background="Transparent" BorderThickness="0" Grid.Column="1" Name="FeelDuringFineButton" Grid.Row="1" Click="FeelDuringButton_Click" Tag="Fine" BorderBrush="Red">
+                <StackPanel>
+                    <Image Width="50" Height="50" Source="/VCS.SLOToolsLib;component/images/emotions/fine.jpg"></Image>
+                    <TextBlock Name="FeelDuringFineText" HorizontalAlignment="Center" FontSize="12" Margin="5" FontWeight="Bold" Foreground="#99CC99">Fine</TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Background="Transparent" BorderThickness="0" Grid.Column="2" Name="FeelDuringEnthusiasticButton" Grid.Row="1" Click="FeelDuringButton_Click" Tag="Enthusiastic" BorderBrush="Red">
+                <StackPanel>
+                    <Image Width="50" Height="50" Source="/VCS.SLOToolsLib;component/images/emotions/enthusiastic.jpg"></Image>
+                    <TextBlock Name="FeelDuringEnthusiasticText" HorizontalAlignment="Center" FontSize="12" Margin="5" FontWeight="Bold" Foreground="#99CC00">Enthusiastic</TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Background="Transparent" BorderThickness="0" Grid.Column="1" Name="FeelDuringOtherButton" Grid.Row="2" Click="FeelDuringButton_Click" Tag="Other" BorderBrush="Red" Visibility="Collapsed" >
+                <StackPanel>
+                    <Image Width="50" Height="50" Source="/VCS.SLOToolsLib;component/images/emotions/other.jpg"></Image>
+                    <TextBlock HorizontalAlignment="Center" FontSize="11" FontWeight="Bold" Margin="5" Foreground="#0055FF">Other</TextBlock>
+                </StackPanel>
+            </Button>
+            <StackPanel Name="FeelDuringOtherTextBoxPanel" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Center" Visibility="Collapsed" Margin="10">
+                <TextBlock HorizontalAlignment="Center" FontSize="11" FontWeight="Bold" Margin="5" Foreground="#0055FF">Type:</TextBlock>
+                <TextBox Name="FeelDuringOtherTextBox" Width="150"></TextBox>
+            </StackPanel>
+        </StackPanel>
+
+        <TextBlock toolkit:DockPanel.Dock="Top" x:Name="FeelExperiencedTitleText" FontSize="16" FontWeight="Bold" Height="20" Margin="10,20,10,10" HorizontalAlignment="left">Did you experienced any of these?</TextBlock>
+
+        <StackPanel toolkit:DockPanel.Dock="Top" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Background="Transparent" BorderThickness="0" Grid.Column="1" Name="FeelExperiencedAngryButton" Click="FeelExperiencedButton_Click" Tag="Angry" BorderBrush="Red">
+                <StackPanel>
+                    <Image Width="50" Height="50" Source="/VCS.SLOToolsLib;component/images/emotions/angry.jpg"></Image>
+                    <TextBlock Name="FeelExperiencedAngryText" HorizontalAlignment="Center" FontSize="12" Margin="5" FontWeight="Bold" Foreground="#FF0000">Angry</TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Background="Transparent" BorderThickness="0" Grid.Column="2" Name="FeelExperiencedAnxiousButton" Click="FeelExperiencedButton_Click" Tag="Anxious" BorderBrush="Red">
+                <StackPanel>
+                    <Image Width="50" Height="50" Source="/VCS.SLOToolsLib;component/images/emotions/anxious.jpg"></Image>
+                    <TextBlock Name="FeelExperiencedAnxiousText" HorizontalAlignment="Center" FontSize="12" Margin="5" FontWeight="Bold" Foreground="#FF6600">Anxious</TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Background="Transparent" BorderThickness="0" Grid.Column="3" Name="FeelExperiencedConfusedButton" Click="FeelExperiencedButton_Click" Tag="Confused" BorderBrush="Red">
+                <StackPanel>
+                    <Image Width="50" Height="50" Source="/VCS.SLOToolsLib;component/images/emotions/confused.jpg"></Image>
+                    <TextBlock Name="FeelExperiencedConfusedText" HorizontalAlignment="Center" FontSize="12" Margin="5" FontWeight="Bold" Foreground="#FF9900">Confused</TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Background="Transparent" BorderThickness="0" Name="FeelExperiencedPuzzledButton" Grid.Row="1" Click="FeelExperiencedButton_Click" Tag="Puzzled" BorderBrush="Red">
+                <StackPanel>
+                    <Image Width="50" Height="50" Source="/VCS.SLOToolsLib;component/images/emotions/puzzled.jpg"></Image>
+                    <TextBlock Name="FeelExperiencedPuzzledText" HorizontalAlignment="Center" FontSize="12" Margin="5" FontWeight="Bold" Foreground="#DDDD33">Puzzled</TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Background="Transparent" BorderThickness="0" Name="FeelExperiencedNeutralButton" Grid.Row="1" Click="FeelExperiencedButton_Click" Tag="Neutral" BorderBrush="Red">
+                <StackPanel>
+                    <Image Width="50" Height="50" Source="/VCS.SLOToolsLib;component/images/emotions/neutral.jpg"></Image>
+                    <TextBlock Name="FeelExperiencedNeutralText" HorizontalAlignment="Center" FontSize="12" Margin="5" FontWeight="Bold" Foreground="#BBBB00">Neutral</TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Background="Transparent" BorderThickness="0" Grid.Column="1" Name="FeelExperiencedInterestedButton" Grid.Row="1" Click="FeelExperiencedButton_Click" Tag="Interested" BorderBrush="Red">
+                <StackPanel>
+                    <Image Width="50" Height="50" Source="/VCS.SLOToolsLib;component/images/emotions/interested.jpg"></Image>
+                    <TextBlock Name="FeelExperiencedInterestedText" HorizontalAlignment="Center" FontSize="12" Margin="5" FontWeight="Bold" Foreground="#99CC99">Interested</TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Background="Transparent" BorderThickness="0" Grid.Column="2" Name="FeelExperiencedInspiredButton" Grid.Row="1" Click="FeelExperiencedButton_Click" Tag="Inspired" BorderBrush="Red">
+                <StackPanel>
+                    <Image Width="50" Height="50" Source="/VCS.SLOToolsLib;component/images/emotions/inspired.jpg"></Image>
+                    <TextBlock Name="FeelExperiencedInspiredText" HorizontalAlignment="Center" FontSize="12" Margin="5" FontWeight="Bold" Foreground="#99CC00">Inspired</TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Background="Transparent" BorderThickness="0" Grid.Column="3" Name="FeelExperiencedExcitedButton" Grid.Row="1" Click="FeelExperiencedButton_Click" Tag="Excited" BorderBrush="Red">
+                <StackPanel>
+                    <Image Width="50" Height="50" Source="/VCS.SLOToolsLib;component/images/emotions/excited.jpg"></Image>
+                    <TextBlock Name="FeelExperiencedExcitedText" HorizontalAlignment="Center" FontSize="12" Margin="5" FontWeight="Bold" Foreground="#009900">Excited</TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Background="Transparent" BorderThickness="0" Grid.Column="1" Name="FeelExperiencedOtherButton" Grid.Row="2" Click="FeelExperiencedButton_Click" Tag="Other" BorderBrush="Red" Visibility="Collapsed">
+                <StackPanel>
+                    <Image Width="50" Height="50" Source="/VCS.SLOToolsLib;component/images/emotions/other.jpg"></Image>
+                    <TextBlock HorizontalAlignment="Center" FontSize="11" FontWeight="Bold" Margin="5" Foreground="#0055FF">Other</TextBlock>
+                </StackPanel>
+            </Button>
+            <StackPanel Name="FeelExperiencedOtherTextBoxPanel" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Center" Visibility="Collapsed" Margin="10">
+                <TextBlock HorizontalAlignment="Center" FontSize="11" FontWeight="Bold" Margin="5" Foreground="#0055FF">Type:</TextBlock>
+                <TextBox Name="FeelExperiencedOtherTextBox" Width="100"></TextBox>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel toolkit:DockPanel.Dock="Bottom" HorizontalAlignment="Right">
+            <Button Name="ContinueButton" Margin="10" Width="100" Height="40" FontSize="14" FontWeight="Bold" Click="ContinueButton_Click">Continue</Button>
+        </StackPanel>
+
+    </toolkit:DockPanel>
+</UserControl>

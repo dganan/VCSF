@@ -1,0 +1,256 @@
+﻿<navigation:Page x:Class="VCS.AssessmentSceneEditorPage" 
+           xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:local="clr-namespace:VCS"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="640" d:DesignHeight="490"
+           Title="AssessmentSceneEditorPage Page">
+    <navigation:Page.Resources>
+        <local:SceneTypeToImageSourceConverter x:Key="sceneTypeConverter" />
+    </navigation:Page.Resources>
+    <Grid>
+        <StackPanel x:Name="LayoutRoot" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" DataContext="{Binding}">
+            <TextBlock FontSize="20" FontWeight="Bold" Margin="10" HorizontalAlignment="Center">Assessment scene editor</TextBlock>
+            <StackPanel Orientation="Horizontal" Margin="10,0,10,10">
+                <Button Name="BackButton" Click="BackButton_Click" Width="34" Height="34" ToolTipService.ToolTip="Back to Scenes list" Margin="2">
+                    <Image Source="/VCS.SLOEditor;component/images/back.png"></Image>
+                </Button>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" DataContext="{Binding}" Margin="10,0,10,0">
+                <TextBlock Text="Name:" VerticalAlignment="Center"></TextBlock>
+                <TextBox Name="txtName" Width="550" Text="{Binding Name}" Margin="10,0,0,0" LostFocus="txtName_LostFocus"></TextBox>
+            </StackPanel>
+            <sdk:TabControl Name="tabControl1" Background="LightGray" Margin="10" Height="350">
+                <sdk:TabItem Header="Questions" Name="tabQuestions">
+                    <toolkit:DockPanel LastChildFill="True">
+                        <StackPanel Margin="0,10,10,10" toolkit:DockPanel.Dock="Right">
+                            <Button Name="FirstButton" Click="FirstButton_Click" Width="34" Height="34" ToolTipService.ToolTip="Move question to first position" Margin="2">
+                                <Image Source="/VCS.SLOEditor;component/images/first.png"></Image>
+                            </Button>
+                            <Button Name="UpButton" Click="UpButton_Click" Width="34" Height="34" ToolTipService.ToolTip="Move question up" Margin="2">
+                                <Image Source="/VCS.SLOEditor;component/images/up.png"></Image>
+                            </Button>
+                            <Button Name="DownButton" Click="DownButton_Click" Width="34" Height="34" ToolTipService.ToolTip="Move question down" Margin="2">
+                                <Image Source="/VCS.SLOEditor;component/images/down.png"></Image>
+                            </Button>
+                            <Button Name="LastButton" Click="LastButton_Click" Width="34" Height="34" ToolTipService.ToolTip="Move question to last position" Margin="2">
+                                <Image Source="/VCS.SLOEditor;component/images/last.png"></Image>
+                            </Button>
+                        </StackPanel>
+                        <StackPanel Margin="0,10,10,10" toolkit:DockPanel.Dock="Right">
+                            <Button Name="AddButton" Click="AddButton_Click" Width="34" Height="34" ToolTipService.ToolTip="Add new question" Margin="2">
+                                <Image Source="/VCS.SLOEditor;component/images/add.png"></Image>
+                            </Button>
+                            <Button Name="DuplicateButton" Click="DuplicateButton_Click" Width="34" Height="34" ToolTipService.ToolTip="Duplicate question" Margin="2">
+                                <Image Source="/VCS.SLOEditor;component/images/duplicate.png"></Image>
+                            </Button>
+                            <Button Name="RemoveButton" Click="RemoveButton_Click" Width="34" Height="34" ToolTipService.ToolTip="Remove question" Margin="2">
+                                <Image Source="/VCS.SLOEditor;component/images/remove.png"></Image>
+                            </Button>
+                            <Button Name="EditButton" Click="EditButton_Click" Width="34" Height="34" ToolTipService.ToolTip="Edit question" Margin="2">
+                                <Image Source="/VCS.SLOEditor;component/images/edit.png"></Image>
+                            </Button>
+                        </StackPanel>
+                        <ListBox x:Name="QuestionsList" ItemsSource="{Binding Questions}" Margin="10" SelectionMode="Single">
+                            <ListBox.ItemContainerStyle>
+                                <Style TargetType="ListBoxItem">
+                                    <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
+                                </Style>
+                            </ListBox.ItemContainerStyle>
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <local:ClickableGridPanel x:Name="QuestionsPanel" DoubleClick="QuestionsPanel_DoubleClick">
+                                        <toolkit:DockPanel LastChildFill="True" Margin="10">
+                                            <StackPanel toolkit:DockPanel.Dock="Right" Orientation="Horizontal" VerticalAlignment="Center">
+                                                <TextBlock Text="Score:" Height="25" VerticalAlignment="Center" />
+                                                <TextBlock Text="{Binding Score}" Height="20" VerticalAlignment="Center" />
+                                            </StackPanel>
+                                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                <TextBlock Text="{Binding QuestionText}" Height="20" VerticalAlignment="Center" />
+                                            </StackPanel>
+                                        </toolkit:DockPanel>
+                                    </local:ClickableGridPanel>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </toolkit:DockPanel>
+                </sdk:TabItem>
+                <sdk:TabItem Header="Jump rules" Name="tabJumpRules">
+                    <toolkit:DockPanel LastChildFill="True">
+                        <StackPanel Margin="0,10,10,10" toolkit:DockPanel.Dock="Right">
+                            <Button Name="JumpsListFirstButton" Click="JumpsListFirstButton_Click" Width="34" Height="34" ToolTipService.ToolTip="Move jump rule to first position" Margin="2">
+                                <Image Source="/VCS.SLOEditor;component/images/first.png"></Image>
+                            </Button>
+                            <Button Name="JumpsListUpButton" Click="JumpsListUpButton_Click" Width="34" Height="34" ToolTipService.ToolTip="Move jump rule up" Margin="2">
+                                <Image Source="/VCS.SLOEditor;component/images/up.png"></Image>
+                            </Button>
+                            <Button Name="JumpsListDownButton" Click="JumpsListDownButton_Click" Width="34" Height="34" ToolTipService.ToolTip="Move jump rule down" Margin="2">
+                                <Image Source="/VCS.SLOEditor;component/images/down.png"></Image>
+                            </Button>
+                            <Button Name="JumpsListLastButton" Click="JumpsListLastButton_Click" Width="34" Height="34" ToolTipService.ToolTip="Move jump rule to last position" Margin="2">
+                                <Image Source="/VCS.SLOEditor;component/images/last.png"></Image>
+                            </Button>
+                        </StackPanel>
+                        <StackPanel Margin="0,10,10,10" toolkit:DockPanel.Dock="Right">
+                            <Button Name="JumpsListAddButton" Click="JumpsListAddButton_Click" Width="34" Height="34" ToolTipService.ToolTip="Add new jump rule" Margin="2">
+                                <Image Source="/VCS.SLOEditor;component/images/add.png"></Image>
+                            </Button>
+                            <Button Name="JumpsListDuplicateButton" Click="JumpsListDuplicateButton_Click" Width="34" Height="34" ToolTipService.ToolTip="Duplicate jump rule" Margin="2">
+                                <Image Source="/VCS.SLOEditor;component/images/duplicate.png"></Image>
+                            </Button>
+                            <Button Name="JumpsListRemoveButton" Click="JumpsListRemoveButton_Click" Width="34" Height="34" ToolTipService.ToolTip="Remove jump rule" Margin="2">
+                                <Image Source="/VCS.SLOEditor;component/images/remove.png"></Image>
+                            </Button>
+                            <Button Name="JumpsListEditButton" Click="JumpsListEditButton_Click" Width="34" Height="34" ToolTipService.ToolTip="Edit jump rule" Margin="2">
+                                <Image Source="/VCS.SLOEditor;component/images/edit.png"></Image>
+                            </Button>
+                        </StackPanel>
+                        <ListBox x:Name="JumpsList" ItemsSource="{Binding JumpRules}" Margin="10" SelectionMode="Single">
+                            <ListBox.ItemContainerStyle>
+                                <Style TargetType="ListBoxItem">
+                                    <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
+                                </Style>
+                            </ListBox.ItemContainerStyle>
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <local:ClickableGridPanel x:Name="JumpsPanel" DoubleClick="JumpsPanel_DoubleClick">
+                                        <TextBlock Text="{Binding Description}" Height="20" VerticalAlignment="Center" />
+                                        <!--<toolkit:DockPanel LastChildFill="True" Margin="10">
+                                            <StackPanel toolkit:DockPanel.Dock="Right" Orientation="Horizontal" VerticalAlignment="Center">
+                                                <TextBlock Text="Score:" Height="25" VerticalAlignment="Center" />
+                                                <TextBlock Text="{Binding Score}" Height="20" VerticalAlignment="Center" />
+                                            </StackPanel>
+                                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                <TextBlock Text="{Binding QuestionText}" Height="20" VerticalAlignment="Center" />
+                                            </StackPanel>
+                                        </toolkit:DockPanel>-->
+                                    </local:ClickableGridPanel>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </toolkit:DockPanel>
+                </sdk:TabItem>
+                <sdk:TabItem Header="Default jump" Name="tabDefault">
+                    <StackPanel Margin="10">
+                        <StackPanel toolkit:DockPanel.Dock="Bottom" Margin="10">
+                            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                                <TextBlock VerticalAlignment="Center" Width="200" FontWeight="Bold" TextAlignment="Right">Scene to jump by default:</TextBlock>
+                                <ComboBox Name="cbDefaultSceneToJump" Height="64" Width="350" Margin="10,0,0,0" SelectionChanged="cbDefaultSceneToJump_SelectionChanged">
+                                    <ComboBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10">
+                                                <TextBlock Text="{Binding Order}" VerticalAlignment="Center" FontWeight="Bold" />
+                                                <Image Width="32" Height="32" Source="{Binding Path=SceneType, Converter={StaticResource sceneTypeConverter}}" Margin="10,0" />
+                                                <TextBlock Text="{Binding Name}" VerticalAlignment="Center" />
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ComboBox.ItemTemplate>
+                                </ComboBox>
+                            </StackPanel>
+                            <StackPanel>
+                                <CheckBox Name="ckDefaultEnd" Margin="210,10,10,10" Checked="ckDefaultEnd_Checked" Unchecked="ckDefaultEnd_Unchecked">End reproduction by default, instead of jumping</CheckBox>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock VerticalAlignment="Center" Width="200" FontWeight="Bold" TextAlignment="Right">Message to show by default:</TextBlock>
+                                <TextBox Name="tbDefaultFeedbackMessage" Height="32" Width="350" Margin="10,0,0,0" TextChanged="tbDefaultFeedbackMessage_TextChanged" />
+                            </StackPanel>
+                            <StackPanel HorizontalAlignment="Right">
+                                <TextBlock VerticalAlignment="Center" Margin="0,0,10,0" Height="32" Width="300" FontWeight="Bold" TextAlignment="Right">(leave blank to use the standard message)</TextBlock>
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </sdk:TabItem>
+            </sdk:TabControl>
+        </StackPanel>
+        <Grid Name="JumpRuleEditPanel" Visibility="Collapsed">
+            <StackPanel Background="White" Opacity="0.9"></StackPanel>
+            <StackPanel Margin="50,50,50,26" Opacity="1" Background="White">
+                <StackPanel Margin="10">
+                    <TextBlock FontSize="20" FontWeight="Bold" Margin="10" HorizontalAlignment="Center">Jump rule properties</TextBlock>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50"></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center">Apply</TextBlock>
+
+                        <CheckBox Name="cbActivateTestResult" VerticalAlignment="Center" HorizontalAlignment="Center" Checked="cbActivateTestResult_Checked" Unchecked="cbActivateTestResult_Unchecked" Grid.Row="1" IsChecked="true"></CheckBox>
+
+                        <StackPanel Grid.Column="1" Grid.Row="1">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+                                <TextBlock Text="Test result: between" VerticalAlignment="Center" Width="150" FontWeight="Bold" TextAlignment="Right"></TextBlock>
+                                <TextBox Name="TestResultMinText" Width="50" Height="30" Margin="10,0,10,0"></TextBox>
+                                <CheckBox Name="TestResultMinIncluded" VerticalAlignment="Center" IsChecked="true">included</CheckBox>
+                                <TextBlock Text="and" VerticalAlignment="Center" Width="30" FontWeight="Bold" TextAlignment="Right"></TextBlock>
+                                <TextBox Name="TestResultMaxText" Width="50" Height="30" Margin="10,0,10,0"></TextBox>
+                                <CheckBox Name="TestResultMaxIncluded" VerticalAlignment="Center" IsChecked="true">included</CheckBox>
+                            </StackPanel>
+                            <TextBlock HorizontalAlignment="Right" Margin="0,0,10,0">The test result ranges from 0 to 1</TextBlock>
+                        </StackPanel>
+
+                        <CheckBox Name="cbActivateTestAttempts" VerticalAlignment="Center" HorizontalAlignment="Center" Checked="cbActivateTestAttempts_Checked" Unchecked="cbActivateTestAttempts_Unchecked" Grid.Row="2" IsChecked="true"></CheckBox>
+
+                        <StackPanel Grid.Column="1" Grid.Row="2">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+                                <TextBlock Text="Nº of attempts: between" VerticalAlignment="Center" Width="160" FontWeight="Bold" TextAlignment="Right"></TextBlock>
+                                <TextBox Name="TestAttemptsMinText" Width="50" Height="30" Margin="10,0,10,0"></TextBox>
+                                <TextBlock Text="and" VerticalAlignment="Center" Width="25" FontWeight="Bold" TextAlignment="Right"></TextBlock>
+                                <TextBox Name="TestAttemptsMaxText" Width="50" Height="30" Margin="10,0,10,0"></TextBox>
+                            </StackPanel>
+                            <TextBlock HorizontalAlignment="Right" Margin="0,0,10,0">Leave empty the max value for "infinite"</TextBlock>
+                        </StackPanel>
+
+                        <CheckBox Name="cbActivatePrerequisites" VerticalAlignment="Center" HorizontalAlignment="Center" Checked="cbActivatePrerequisites_Checked" Unchecked="cbActivatePrerequisites_Unchecked" Grid.Row="3" IsChecked="true"></CheckBox>
+
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10" Grid.Column="1" Grid.Row="3">
+                            <CheckBox Name="Prerequisites" VerticalAlignment="Center" FontWeight="Bold">Student meets SLO prerequisites</CheckBox>
+                        </StackPanel>
+
+
+                    </Grid>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                        <TextBlock VerticalAlignment="Center" Width="150" FontWeight="Bold" TextAlignment="Right">Scene to jump:</TextBlock>
+                        <ComboBox Name="cbSceneToJump" Height="64" Width="350" Margin="10,0,0,0">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10">
+                                        <TextBlock Text="{Binding Order}" VerticalAlignment="Center" FontWeight="Bold" />
+                                        <Image Width="32" Height="32" Source="{Binding Path=SceneType, Converter={StaticResource sceneTypeConverter}}" Margin="10,0" />
+                                        <TextBlock Text="{Binding Name}" VerticalAlignment="Center" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                    </StackPanel>
+                    <StackPanel>
+                        <CheckBox Name="ckEnd" Margin="210,10,10,10" Checked="ckEnd_Checked" Unchecked="ckEnd_Unchecked">End reproduction instead of jumping</CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center" Width="200" FontWeight="Bold" TextAlignment="Right">Feedback message to show:</TextBlock>
+                        <TextBox Name="tbFeedbackMessage" Height="32" Width="300" Margin="10,0,0,0" />
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Right">
+                        <TextBlock VerticalAlignment="Center"  Margin="0,0,30,0" Height="32" Width="300" FontWeight="Bold" TextAlignment="Right">(leave blank to use the standard message)</TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Name="JumpRuleEditAcceptButton" Click="JumpRuleEditAcceptButton_Click" Margin="10" Width="100" Height="30">Accept</Button>
+                        <Button Name="JumpRuleEditCancelButton" Click="JumpRuleEditCancelButton_Click" Margin="10" Width="100" Height="30">Cancel</Button>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</navigation:Page>

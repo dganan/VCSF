@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="VCS Creator use cases">
+  <useCaseModelRootMoniker Id="817bef00-785f-408c-91ad-b86786916541" />
+  <nestedChildShapes>
+    <actorShape Id="cc82d0bf-544c-4d49-a24d-0925d5b35d6e" absoluteBounds="1.625, 1.625, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="7c9bbf47-f312-4400-9ec3-e522c5e91323" LastKnownName="User" />
+      <relativeChildShapes />
+    </actorShape>
+    <useCaseShape Id="d74a2754-533a-455f-9f75-4643ff981258" absoluteBounds="3.125, 1.375, 2.375, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="a4488948-4ea9-481f-9fe7-be4be8145bdf" LastKnownName="Show list of available collaborative sessions" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(2.125 : 1.83554151058377); (3.14809250924297 : 1.6740627707926)]" fixedFrom="Algorithm" fixedTo="Caller" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="acf9d206-feeb-4b3b-9206-0593e20bc3b0" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="cc82d0bf-544c-4d49-a24d-0925d5b35d6e" />
+        <useCaseShapeMoniker Id="d74a2754-533a-455f-9f75-4643ff981258" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseShape Id="69013e01-ad1a-4f39-b544-a1d0f9ef75aa" absoluteBounds="3.125, 2.125, 2.375, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="d8431ee0-0b4a-4174-abba-d7cfd85de523" LastKnownName="Convert one collaborative session into a SLO" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(2.125 : 1.96365540597196); (3.147717648042 : 2.32633319909935)]" fixedFrom="Algorithm" fixedTo="Caller" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="04095a8e-438e-455e-a8c5-18e427f89697" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="cc82d0bf-544c-4d49-a24d-0925d5b35d6e" />
+        <useCaseShapeMoniker Id="69013e01-ad1a-4f39-b544-a1d0f9ef75aa" />
+      </nodes>
+    </useCaseAssociationConnector>
+  </nestedChildShapes>
+</useCaseDiagram>

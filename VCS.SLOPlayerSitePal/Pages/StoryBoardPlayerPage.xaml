@@ -1,0 +1,48 @@
+﻿<navigation:Page x:Class="VCS.StoryBoardPlayerPage" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:toolkit="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Toolkit"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           xmlns:local="clr-namespace:VCS"
+           d:DesignWidth="640" Height="580"
+           Title="StoryBoardPlayer Page">
+    <Grid>
+        <toolkit:DockPanel x:Name="LayoutRoot" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" LastChildFill="true" Height="580">
+            <Grid toolkit:DockPanel.Dock="Bottom" Height="80">
+                <StackPanel x:Name="NavigationPanel" Orientation="Horizontal" HorizontalAlignment="Center" >
+                    <Button Name="PreviousButton" Click="PreviousButton_Click" Width="48" Height="48" Margin="10" ToolTipService.ToolTip="Previous" Visibility="Collapsed">
+                        <Image Source="/VCS.SLOPlayerSitePal;component/images/previous.png" />
+                    </Button>
+                    <Button Name="PlayButton" Click="PlayButton_Click" Width="48" Height="48" Margin="10" ToolTipService.ToolTip="Play">
+                        <Image Source="/VCS.SLOPlayerSitePal;component/images/play.png" />
+                    </Button>
+                    <Button Name="PauseButton" Click="PauseButton_Click" Width="48" Height="48" Margin="10" ToolTipService.ToolTip="Pause" Visibility="Collapsed">
+                        <Image Source="/VCS.SLOPlayerSitePal;component/images/pause.png" />
+                    </Button>
+                    <Button Name="StopButton" Click="StopButton_Click" Width="48" Height="48" Margin="10" ToolTipService.ToolTip="Stop" Visibility="Collapsed">
+                        <Image Source="/VCS.SLOPlayerSitePal;component/images/stop.png" />
+                    </Button>
+                    <Button Name="NextButton" Click="NextButton_Click" Width="48" Height="48" Margin="10" ToolTipService.ToolTip="Next" Visibility="Collapsed">
+                        <Image Source="/VCS.SLOPlayerSitePal;component/images/next.png" />
+                    </Button>
+                    <Button Name="FastNextButton" Click="FastNextButton_Click" Width="48" Height="48" Margin="10" ToolTipService.ToolTip="Fast Next" Visibility="Collapsed">
+                        <Image Source="/VCS.SLOPlayerSitePal;component/images/fastnext.png" />
+                    </Button>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Right" Width="200" Orientation="Vertical" Margin="10">
+                    <TextBlock Name="ProgressText" TextAlignment="Center" Margin="5" />
+                    <ProgressBar Name="ProgressBar" Margin="5" Height="20" />
+                </StackPanel>
+            </Grid>
+            <local:StoryBoardPlayer x:Name="StoryBoardPlayer" Height="500"></local:StoryBoardPlayer>
+        </toolkit:DockPanel>
+        <Grid Background="Black" Opacity="0.6" Name="WaitPanel" Visibility="Collapsed">
+            <Grid Background="White" Opacity="1" Margin="100, 100, 100, 350" HorizontalAlignment="Center">
+                <TextBlock FontSize="20" TextWrapping="Wrap" Margin="30">Loading text to speech engine, please wait...</TextBlock>
+            </Grid>
+        </Grid>
+    </Grid>
+</navigation:Page>

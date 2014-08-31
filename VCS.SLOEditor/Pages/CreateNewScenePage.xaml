@@ -1,0 +1,26 @@
+﻿<navigation:Page x:Class="VCS.CreateNewScenePage" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           xmlns:local="clr-namespace:VCS"
+           d:DesignWidth="640" d:DesignHeight="480"
+           Title="CreateNewScenePage Page">
+    <StackPanel x:Name="LayoutRoot" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <TextBlock FontSize="20" FontWeight="Bold" Margin="10" HorizontalAlignment="Center">Create new scene</TextBlock>
+        <StackPanel Orientation="Horizontal" Margin="10" HorizontalAlignment="Center">
+            <TextBlock Text="Scene name:" VerticalAlignment="Center" Width="90"></TextBlock>
+            <TextBox Name="txtName" Width="200" Margin="10,0,0,0"></TextBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="10" HorizontalAlignment="Center">
+            <TextBlock Text="Scene type:" VerticalAlignment="Center" Width="90"></TextBlock>
+            <ComboBox Name="cbType" Margin="10,0,0,0" Height="25" Width="200"></ComboBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
+            <Button Name="AcceptButton" Click="AcceptButton_Click" Margin="10" Width="100" Height="30">Accept</Button>
+            <Button Name="CancelButton" Click="CancelButton_Click" Margin="10" Width="100" Height="30">Cancel</Button>
+        </StackPanel>
+    </StackPanel>
+</navigation:Page>

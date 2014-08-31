@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0e57bcba-ff31-4ca4-80bb-38a29331cdff" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/VCS.Services/ActivityLogService/ActivityLogService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ActivityLogService3.xsd" MetadataType="Schema" ID="17164624-d888-473f-bb62-391897bf10a8" SourceId="1" SourceUrl="http://localhost/VCS.Services/ActivityLogService/ActivityLogService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ActivityLogService.disco" MetadataType="Disco" ID="d5d55aad-1995-45bf-8fb5-f4396580bc23" SourceId="1" SourceUrl="http://localhost/VCS.Services/ActivityLogService/ActivityLogService.svc?disco" />
+    <MetadataFile FileName="ActivityLogService2.xsd" MetadataType="Schema" ID="40aedd4b-5ad7-4092-bc4e-fe8568771037" SourceId="1" SourceUrl="http://localhost/VCS.Services/ActivityLogService/ActivityLogService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ActivityLogService.wsdl" MetadataType="Wsdl" ID="3fd0d32d-a7ae-43f7-b238-89233c4595fe" SourceId="1" SourceUrl="http://localhost/VCS.Services/ActivityLogService/ActivityLogService.svc?wsdl" />
+    <MetadataFile FileName="ActivityLogService1.xsd" MetadataType="Schema" ID="4d2dbc50-a294-441e-a17f-66a6f914d548" SourceId="1" SourceUrl="http://localhost/VCS.Services/ActivityLogService/ActivityLogService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

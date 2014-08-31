@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="0ff19898-afb8-4e40-9c1f-6cab0ebb8b26" name="Categorization" linkedPackageId="a8fcae78-dec2-4fb6-8da8-c9f698bf44e5" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="65564cd6-847f-4382-983d-6011e5b79cb4" name="Categorization" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="cf2d851f-94d3-44fb-84ac-c5ba0d43cf5f" />
+        <nodes>
+          <initialNode Id="a267422f-bd38-41be-a5cc-8749ffcdc5c3" name="Initial1" isLeaf="false">
+            <elementDefinition Id="14c29853-4781-4ca0-9282-4fedc7b91f7e" />
+            <flowNodeTargets>
+              <controlFlow Id="47f70f0d-6198-4ff2-a87d-8f25b45ce949" isLeaf="false">
+                <opaqueActionMoniker Id="bbeaade7-1c1f-40a1-8ae1-b99e12263546" LastKnownName="Read samples file" />
+                <elementDefinition Id="00469333-f8b2-4c66-a2d5-a9ade2c11ac7" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <activityFinalNode Id="200fda01-8ca2-4831-9124-dafd33cdada7" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="aeff1b6c-3575-4dce-9311-03046fe33b5e" />
+          </activityFinalNode>
+          <opaqueAction Id="bbeaade7-1c1f-40a1-8ae1-b99e12263546" name="Read samples file" isLeaf="false">
+            <elementDefinition Id="995487e7-69be-4e3e-8ca4-cd7a5c399ccc" />
+            <flowNodeTargets>
+              <controlFlow Id="10b2a01a-af0f-4041-a1da-36b43096889b" isLeaf="false">
+                <opaqueActionMoniker Id="5260f63b-924a-465a-8156-ef5f824f9077" LastKnownName="Clean samples" />
+                <elementDefinition Id="96ae724b-8fd6-4cfb-9b0f-57034513257e" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="5260f63b-924a-465a-8156-ef5f824f9077" name="Clean samples" isLeaf="false">
+            <elementDefinition Id="6f145f7a-02aa-4733-aa0f-9405d67b9465" />
+            <flowNodeTargets>
+              <controlFlow Id="734c9eac-0800-4b5c-bfb4-f309666ee3dd" isLeaf="false">
+                <opaqueActionMoniker Id="e4d58b3d-360d-4854-9989-83f288b55645" LastKnownName="Train the classifier" />
+                <elementDefinition Id="708fb7ac-50b6-49b9-a4dc-ddcdd814d710" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="a5ae864c-161e-4690-a683-444d41b785bb" name="Serialize classifier" isLeaf="false">
+            <elementDefinition Id="47ae9239-a6b2-4e52-994a-a3fb44c360b5" />
+            <flowNodeTargets>
+              <controlFlow Id="640e3106-3200-4870-9448-f3a9768eb2eb" isLeaf="false">
+                <activityFinalNodeMoniker Id="200fda01-8ca2-4831-9124-dafd33cdada7" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="e5178d87-d8b1-4935-a493-564756d35420" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="e4d58b3d-360d-4854-9989-83f288b55645" name="Train the classifier" isLeaf="false">
+            <elementDefinition Id="b719c4ac-84f2-4ee7-b41d-eb1bd0e5da35" />
+            <flowNodeTargets>
+              <controlFlow Id="8dda7c9c-6d29-496c-bad9-2ea6967a06fc" isLeaf="false">
+                <opaqueActionMoniker Id="a5ae864c-161e-4690-a683-444d41b785bb" LastKnownName="Serialize classifier" />
+                <elementDefinition Id="b86a3f37-4a7f-4bad-9dd9-e523dc53afbe" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="a8fcae78-dec2-4fb6-8da8-c9f698bf44e5" name="VCS.Modelling">
+    <elementDefinition Id="3026f59e-7806-4361-9908-c778219bdf5e" />
+    <profileInstances>
+      <packageHasProfileInstances Id="cdf32c13-dbd0-4228-9809-102cc15f3b1f">
+        <profileInstance Id="4f39b6a6-8e2a-4312-be33-23f2a071aceb" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="7c34ccd1-ff70-4353-8e69-51808355d108">
+        <profileInstance Id="3012ba43-c486-48d0-bd95-244dd3d1c9b2" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</activityRootModel>

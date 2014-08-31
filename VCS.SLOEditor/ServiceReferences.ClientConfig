@@ -1,0 +1,40 @@
+﻿<configuration>
+  <system.serviceModel>
+    <bindings>
+      <basicHttpBinding>
+        <binding name="BasicHttpBinding_IActivityLogService" maxBufferSize="2147483647"
+          maxReceivedMessageSize="2147483647">
+          <security mode="None" />
+        </binding>
+        <binding name="BasicHttpBinding_IKeywordsRepositoryService" maxBufferSize="2147483647"
+          maxReceivedMessageSize="2147483647">
+          <security mode="None" />
+        </binding>
+        <binding name="BasicHttpBinding_ISpeechActClassificationService"
+          maxBufferSize="2147483647" maxReceivedMessageSize="2147483647">
+          <security mode="None" />
+        </binding>
+        <binding name="BasicHttpBinding_ISLORepositoryService" maxBufferSize="2147483647"
+          maxReceivedMessageSize="2147483647">
+          <security mode="None" />
+        </binding>
+      </basicHttpBinding>
+    </bindings>
+    <client>
+      <endpoint address="http://localhost/VCS.Services/ActivityLogService/ActivityLogService.svc"
+        binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IActivityLogService"
+        contract="ActivityLogService.IActivityLogService" name="BasicHttpBinding_IActivityLogService" />
+      <endpoint address="http://localhost/VCS.Services/KeywordsRepositoryService/KeywordsRepositoryService.svc"
+        binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IKeywordsRepositoryService"
+        contract="KeywordsRepositoryService.IKeywordsRepositoryService"
+        name="BasicHttpBinding_IKeywordsRepositoryService" />
+      <endpoint address="http://localhost/VCS.Services/SpeechActClassificationService/SpeechActClassificationService.svc"
+        binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_ISpeechActClassificationService"
+        contract="SpeechActClassificationService.ISpeechActClassificationService"
+        name="BasicHttpBinding_ISpeechActClassificationService" />
+      <endpoint address="http://localhost/VCS.Services/SLORepositoryService/SLORepositoryService.svc"
+        binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_ISLORepositoryService"
+        contract="SLORepositoryService.ISLORepositoryService" name="BasicHttpBinding_ISLORepositoryService" />
+    </client>
+  </system.serviceModel>
+</configuration>

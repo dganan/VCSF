@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://momanet.it/iwt/Forum/" elementFormDefault="qualified" targetNamespace="http://momanet.it/iwt/Forum/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://mak-pc/IWTPortal3_kforum/wsforumexport/Export.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/VCS" />
+  <xs:import schemaLocation="http://mak-pc/IWTPortal3_kforum/wsforumexport/Export.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ForumSessionExport" />
+  <xs:element name="AvailableCollaborativeSessions">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AvailableCollaborativeSessionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/VCS" minOccurs="0" name="AvailableCollaborativeSessionsResult" nillable="true" type="q1:ArrayOfCollaborativeSessionDescriptor" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadCollaborativeSessionData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/VCS" minOccurs="0" name="cs" nillable="true" type="q2:CollaborativeSessionDescriptor" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadCollaborativeSessionDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/VCS" minOccurs="0" name="ReadCollaborativeSessionDataResult" nillable="true" type="q3:CollaborativeSession" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadUserAccounts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/VCS" minOccurs="0" name="cs" nillable="true" type="q4:CollaborativeSessionDescriptor" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadUserAccountsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/VCS" minOccurs="0" name="ReadUserAccountsResult" nillable="true" type="q5:ArrayOfUserAccount" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadPosts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/VCS" minOccurs="0" name="cs" nillable="true" type="q6:CollaborativeSessionDescriptor" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadPostsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/ForumSessionExport" minOccurs="0" name="ReadPostsResult" nillable="true" type="q7:ArrayOfMessage" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

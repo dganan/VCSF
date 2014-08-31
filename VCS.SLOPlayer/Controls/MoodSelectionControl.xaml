@@ -1,0 +1,96 @@
+﻿<UserControl x:Class="VCS.MoodSelectionControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Toolkit"
+    mc:Ignorable="d"
+    d:DesignWidth="640" Height="500">
+    <toolkit:DockPanel LastChildFill="True">
+        <TextBlock toolkit:DockPanel.Dock="Top" x:Name="TitleText" FontSize="18" FontWeight="Bold" Height="30" Margin="10" HorizontalAlignment="Center">How do you feel today?</TextBlock>
+        <Grid x:Name="LayoutRoot" Background="White" toolkit:DockPanel.Dock="Top" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Button Background="Transparent" BorderThickness="0" Name="SadButton" Click="MoodButton_Click" Tag="Sad" BorderBrush="Red">
+                <StackPanel>
+                    <Image Width="70" Height="70" Source="/VCS.SLOToolsLib;component/images/emotions/sad.jpg"></Image>
+                    <TextBlock Name="SadText" HorizontalAlignment="Center" FontSize="16" FontWeight="Bold" Margin="5" Foreground="#990000">Sad</TextBlock>
+                    <!--<Ellipse Fill="#990000" Width="30" Height="30" Margin="5"></Ellipse>-->
+                </StackPanel>
+            </Button>
+            <Button Background="Transparent" BorderThickness="0" Grid.Column="1" Name="UnhappyButton" Click="MoodButton_Click" Tag="Unhappy" BorderBrush="Red">
+                <StackPanel>
+                    <Image Width="70" Height="70" Source="/VCS.SLOToolsLib;component/images/emotions/unhappy.jpg"></Image>
+                    <TextBlock Name="UnhappyText" HorizontalAlignment="Center" FontSize="16" FontWeight="Bold" Margin="5" Foreground="#FF0000">Unhappy</TextBlock>
+                    <!--<Ellipse Fill="#FF0000" Width="30" Height="30" Margin="5"></Ellipse>-->
+                </StackPanel>
+            </Button>
+            <Button Background="Transparent" BorderThickness="0" Grid.Column="2" Name="BoredButton" Click="MoodButton_Click" Tag="Bored" BorderBrush="Red">
+                <StackPanel>
+                    <Image Width="70" Height="70" Source="/VCS.SLOToolsLib;component/images/emotions/bored.jpg"></Image>
+                    <TextBlock Name="BoredText" HorizontalAlignment="Center" FontSize="16" FontWeight="Bold" Margin="5" Foreground="#FF6600">Bored</TextBlock>
+                    <!--<Ellipse Fill="#FF6600" Width="30" Height="30" Margin="5"></Ellipse>-->
+                </StackPanel>
+            </Button>
+            <Button Background="Transparent" BorderThickness="0" Grid.Column="3" Name="SleepyButton" Click="MoodButton_Click" Tag="Sleepy" BorderBrush="Red">
+                <StackPanel>
+                    <Image Width="70" Height="70" Source="/VCS.SLOToolsLib;component/images/emotions/sleepy.jpg"></Image>
+                    <TextBlock Name="SleepyText" HorizontalAlignment="Center" FontSize="16" FontWeight="Bold" Margin="5" Foreground="#FF9900">Sleepy</TextBlock>
+                    <!--<Ellipse Fill="#FF9900" Width="30" Height="30" Margin="5"></Ellipse>-->
+                </StackPanel>
+            </Button>
+            <Button Background="Transparent" BorderThickness="0" Name="NeutralButton" Grid.Row="1" Click="MoodButton_Click" Tag="Neutral" BorderBrush="Red">
+                <StackPanel>
+                    <Image Width="70" Height="70" Source="/VCS.SLOToolsLib;component/images/emotions/neutral.jpg"></Image>
+                    <TextBlock Name="NeutralText" HorizontalAlignment="Center" FontSize="16" FontWeight="Bold" Margin="5" Foreground="#BBBB00">Neutral</TextBlock>
+                    <!--<Ellipse Fill="#FFFF00" Width="30" Height="30" Margin="5"></Ellipse>-->
+                </StackPanel>
+            </Button>
+            <Button Background="Transparent" BorderThickness="0" Grid.Column="1" Name="FineButton" Grid.Row="1" Click="MoodButton_Click" Tag="Fine" BorderBrush="Red">
+                <StackPanel>
+                    <Image Width="70" Height="70" Source="/VCS.SLOToolsLib;component/images/emotions/fine.jpg"></Image>
+                    <TextBlock Name="FineText" HorizontalAlignment="Center" FontSize="16" FontWeight="Bold" Margin="5" Foreground="#99CC99">Fine</TextBlock>
+                    <!--<Ellipse Fill="#CCFFCC" Width="30" Height="30" Margin="5"></Ellipse>-->
+                </StackPanel>
+            </Button>
+            <Button Background="Transparent" BorderThickness="0" Grid.Column="2" Name="HappyButton" Grid.Row="1" Click="MoodButton_Click" Tag="Happy" BorderBrush="Red">
+                <StackPanel>
+                    <Image Width="70" Height="70" Source="/VCS.SLOToolsLib;component/images/emotions/happy.jpg"></Image>
+                    <TextBlock Name="HappyText" HorizontalAlignment="Center" FontSize="16" FontWeight="Bold" Margin="5" Foreground="#99CC00">Happy</TextBlock>
+                    <!--<Ellipse Fill="#99CC00" Width="30" Height="30" Margin="5"></Ellipse>-->
+                </StackPanel>
+            </Button>
+            <Button Background="Transparent" BorderThickness="0" Grid.Column="3" Name="VeryHappyButton" Grid.Row="1" Click="MoodButton_Click" Tag="Very_happy" BorderBrush="Red">
+                <StackPanel>
+                    <Image Width="70" Height="70" Source="/VCS.SLOToolsLib;component/images/emotions/very_happy.jpg"></Image>
+                    <TextBlock Name="VeryHappyText" HorizontalAlignment="Center" FontSize="16" FontWeight="Bold" Margin="5" Foreground="#009900">Very happy</TextBlock>
+                    <!--<Ellipse Fill="#009900" Width="30" Height="30" Margin="5"></Ellipse>-->
+                </StackPanel>
+            </Button>
+            <Button Background="Transparent" BorderThickness="0" Grid.Column="1" Name="OtherButton" Grid.Row="2" Click="MoodButton_Click" Tag="Other" BorderBrush="Red">
+                <StackPanel>
+                    <Image Width="70" Height="70" Source="/VCS.SLOToolsLib;component/images/emotions/other.jpg"></Image>
+                    <TextBlock Name="OtherText" HorizontalAlignment="Center" FontSize="16" FontWeight="Bold" Margin="5" Foreground="#0055FF">Other</TextBlock>
+                    <!--<Ellipse Fill="#009900" Width="30" Height="30" Margin="5"></Ellipse>-->
+                </StackPanel>
+            </Button>
+            <StackPanel Name="OtherTextBoxPanel" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Orientation="Horizontal" VerticalAlignment="Center" Margin="10" Visibility="Collapsed">
+                <TextBlock HorizontalAlignment="Center" FontSize="16" FontWeight="Bold" Margin="5" Foreground="#0055FF">Type:</TextBlock>
+                <TextBox Name="OtherTextBox" Width="200"></TextBox>
+            </StackPanel>
+
+        </Grid>
+        <StackPanel toolkit:DockPanel.Dock="Bottom" HorizontalAlignment="Right">
+            <Button Name="ContinueButton" Margin="10" Width="100" Height="40" FontSize="16" FontWeight="Bold" Click="ContinueButton_Click">Continue</Button>
+        </StackPanel>
+    </toolkit:DockPanel>
+</UserControl>

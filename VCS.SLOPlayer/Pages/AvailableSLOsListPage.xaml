@@ -1,0 +1,35 @@
+﻿<navigation:Page x:Class="VCS.AvailableSLOsListPage" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           xmlns:local="clr-namespace:VCS"
+           d:DesignWidth="640" d:DesignHeight="600"
+           Title="SLOsList Page">
+    <StackPanel x:Name="LayoutRoot" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+        <TextBlock Name="Titol" FontSize="20" FontWeight="Bold" Margin="10" HorizontalAlignment="Center">StoryBoard player</TextBlock>
+        <TextBlock Name="SelectLabel" FontSize="16" Margin="10">Select the storyboard to play:</TextBlock>
+        <ListBox x:Name="SLOsList" Height="300" ItemsSource="{Binding}" Margin="10">
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
+                </Style>
+            </ListBox.ItemContainerStyle>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <local:ClickableGridPanel x:Name="SLOsPanel" DoubleClick="SLOsPanel_DoubleClick">
+                        <StackPanel>
+                            <TextBlock Text="{Binding Name}" />
+                        </StackPanel>
+                    </local:ClickableGridPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Name="PlayButton" Content="Play" Click="PlayButton_Click" Width="150" Height="30" Margin="10"></Button>
+            <Button Name="OpenSourceButton" Content="Open collaborative session" Click="OpenSourceButton_Click" Width="180" Height="30" Margin="10" Visibility="Collapsed"></Button>
+        </StackPanel>
+    </StackPanel>
+</navigation:Page>

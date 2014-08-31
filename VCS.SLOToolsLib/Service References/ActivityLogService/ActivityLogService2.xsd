@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/VCS" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/VCS" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/VCS.Services/ActivityLogService/ActivityLogService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="Activity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Action" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Arguments" nillable="true" type="tns:ArrayOfArgument" />
+      <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="Activity" nillable="true" type="tns:Activity" />
+  <xs:complexType name="ArrayOfArgument">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Argument" nillable="true" type="tns:Argument" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfArgument" nillable="true" type="tns:ArrayOfArgument" />
+  <xs:complexType name="Argument">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="Argument" nillable="true" type="tns:Argument" />
+</xs:schema>

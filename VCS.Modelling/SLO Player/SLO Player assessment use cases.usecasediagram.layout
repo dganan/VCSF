@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="SLO Player assessment use cases">
+  <useCaseModelRootMoniker Id="ea57f65f-a630-46af-b528-1225282aea6d" />
+  <nestedChildShapes>
+    <useCaseShape Id="f335e1e3-e11a-4685-a752-dbb758f54c07" absoluteBounds="1.625, 1.75, 1.75, 0.625" customColor="PeachPuff" heightOffset="0">
+      <useCaseMoniker Id="d96ac760-7c02-47da-80d7-dbb2787bfe47" LastKnownName="Play assessment scene" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseShape Id="1e2c7a72-120d-412b-8319-42650d44e806" absoluteBounds="4.5, 1.75, 2.375, 0.625" customColor="PeachPuff" heightOffset="0">
+      <useCaseMoniker Id="72003a48-77a0-4f6e-bab0-da0409d9316b" LastKnownName="Play assessment scene part" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <includeConnector edgePoints="[(3.375 : 2.0625); (4.5 : 2.0625)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«include»">
+      <includeMoniker Id="5c638a14-aa25-4225-924e-70ed5743a3de" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="f335e1e3-e11a-4685-a752-dbb758f54c07" />
+        <useCaseShapeMoniker Id="1e2c7a72-120d-412b-8319-42650d44e806" />
+      </nodes>
+    </includeConnector>
+  </nestedChildShapes>
+</useCaseDiagram>

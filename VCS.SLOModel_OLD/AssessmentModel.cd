@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="VCS.Scene" Collapsed="true">
+    <Position X="3" Y="2" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAQAAAAAAAAAAQAAAAAAARA=</HashCode>
+      <FileName>Scene.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VCS.AssessmentScene">
+    <Position X="3" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAEAQAAAAAAABA=</HashCode>
+      <FileName>AssessmentScene.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Questions" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="VCS.Answer">
+    <Position X="9.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAIABAAAAAAAAAAAABA=</HashCode>
+      <FileName>Answer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VCS.Question">
+    <Position X="6" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAgAAAgAAAAAAAgAAAAgAAQAAIAIAAABA=</HashCode>
+      <FileName>Question.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Answers" />
+      <Property Name="CorrectAnswers" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="VCS.SLOElement" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAgAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>SLOElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

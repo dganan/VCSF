@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="676eea89-615d-4ea4-b44e-faadca8eab68" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://iwtalice.crmpa.unisa.it/IWT30Adv_Kforum/wsforumexport/Export.svc/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service2.wsdl" MetadataType="Wsdl" ID="55f8a82e-0f15-44da-8dd5-7f3ec078a366" SourceId="1" SourceUrl="http://iwtalice.crmpa.unisa.it/IWT30Adv_Kforum/wsforumexport/Export.svc/mex" />
+    <MetadataFile FileName="service21.wsdl" MetadataType="Wsdl" ID="2d74d7f3-d65f-4b6a-b047-b2512ef440be" SourceId="1" SourceUrl="http://iwtalice.crmpa.unisa.it/IWT30Adv_Kforum/wsforumexport/Export.svc/mex" />
+    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="f2784448-6ce9-42f4-b3b4-4038a1704008" SourceId="1" SourceUrl="http://iwtalice.crmpa.unisa.it/IWT30Adv_Kforum/wsforumexport/Export.svc/mex" />
+    <MetadataFile FileName="service21.xsd" MetadataType="Schema" ID="216bbcf0-d16e-4204-b768-cf24b0d5501b" SourceId="1" SourceUrl="http://iwtalice.crmpa.unisa.it/IWT30Adv_Kforum/wsforumexport/Export.svc/mex" />
+    <MetadataFile FileName="VCS1.xsd" MetadataType="Schema" ID="d60fca9b-2953-4815-ac06-0cc29bb32410" SourceId="1" SourceUrl="http://iwtalice.crmpa.unisa.it/IWT30Adv_Kforum/wsforumexport/Export.svc/mex" />
+    <MetadataFile FileName="ForumSessionExport1.xsd" MetadataType="Schema" ID="b39421cf-425c-4611-b130-7bad180534a9" SourceId="1" SourceUrl="http://iwtalice.crmpa.unisa.it/IWT30Adv_Kforum/wsforumexport/Export.svc/mex" />
+    <MetadataFile FileName="Arrays1.xsd" MetadataType="Schema" ID="67832960-b253-4d65-be67-09fd8c8f995e" SourceId="1" SourceUrl="http://iwtalice.crmpa.unisa.it/IWT30Adv_Kforum/wsforumexport/Export.svc/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

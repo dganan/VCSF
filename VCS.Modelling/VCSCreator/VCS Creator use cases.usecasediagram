@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="817bef00-785f-408c-91ad-b86786916541" name="VCS Creator use cases" linkedPackageId="c1963150-098d-4097-9ba7-277a1c14a524" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="55aecf26-92b1-4c9d-a819-8ebcde0f4b76">
+      <profileInstance Id="717be49f-140d-4c00-accc-64819a1cda8a" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="0226a8cc-74f9-477e-a386-c21feb8fed3e">
+      <profileInstance Id="a606567d-1544-4cb2-95c6-1af76f258b40" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="7c9bbf47-f312-4400-9ec3-e522c5e91323" name="User" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ccf825fa-146f-44a1-be01-1e6edb13acf2" />
+        <targetEnds>
+          <association Id="acf9d206-feeb-4b3b-9206-0593e20bc3b0" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Show list of available collaborative sessions" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="a4488948-4ea9-481f-9fe7-be4be8145bdf" LastKnownName="Show list of available collaborative sessions" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="689ddffb-0aaf-4859-814e-75336641c088" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="51350b77-2a8c-480f-8ea5-9eda667a58fc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="eb93c228-75dd-4131-b33e-5a7cf5f635e5" name="Show list of available collaborative sessions" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="65f4d3ec-aecc-410d-921c-4b6781f3d800" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="b7c804d3-a361-45ae-b6f6-0b2338fe8246" />
+          </association>
+          <association Id="04095a8e-438e-455e-a8c5-18e427f89697" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Convert one collaborative session into a SLO" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d8431ee0-0b4a-4174-abba-d7cfd85de523" LastKnownName="Convert one collaborative session into a SLO" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d86663fa-3e61-43c0-b5de-15c6f7b5df0d" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6302c025-4151-482d-94db-59aea41a20c1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c8d5b860-43b6-4b19-87ad-242d60de8736" name="Convert one collaborative session into a SLO" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4d5e4f64-72a6-456c-8a1f-ca484ec77168" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0d85f11d-f04f-4377-8bd9-6ec10ac04313" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="a4488948-4ea9-481f-9fe7-be4be8145bdf" name="Show list of available collaborative sessions" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f6c5efeb-d347-426e-baf0-d3cc9445416c" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d8431ee0-0b4a-4174-abba-d7cfd85de523" name="Convert one collaborative session into a SLO" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d8c6a8c2-5632-404d-9b51-b3c4dbd26dbb" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="c1963150-098d-4097-9ba7-277a1c14a524" name="VCS.Modelling">
+    <elementDefinition Id="3026f59e-7806-4361-9908-c778219bdf5e" />
+  </package>
+</useCaseModelRoot>

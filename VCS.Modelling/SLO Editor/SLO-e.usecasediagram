@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="b184ddaf-7fee-43b0-a34a-c0b36bebfa05" name="SLO-e" linkedPackageId="2fb6c5c2-366f-4910-8619-9db6397a2af4" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="1310d154-6a3d-40fc-8295-c930adbed9cb" name="Teacher" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1201f1ec-2bda-4792-8d44-b9af2c2b7c6b" />
+        <targetEnds>
+          <association Id="d8f6e71e-3748-4088-bad3-99ae135905cf" isDerived="false" sourceEndRoleName="Teacher" targetEndRoleName="Create assessment scene" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="71f3bd87-c842-45c7-99ba-ff1a53348059" LastKnownName="Create assessment scene" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d2399055-534e-49e7-a5ee-91280101415c" name="Teacher" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7f7f98ae-0974-4b3d-872c-ad98024a55cd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="669c5c28-5943-47d8-83f9-681ac23e32db" name="Create assessment scene" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3ad231c9-3c29-47a6-8326-191175259b9b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="dd4a8468-ffa9-474e-ad30-21924931e77d" />
+          </association>
+          <association Id="61fb1ab6-b3dd-40d7-82bf-1480c35dba4e" isDerived="false" sourceEndRoleName="Teacher" targetEndRoleName="Edit assessment scene" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="38212d85-a735-4158-b206-031741597771" LastKnownName="Edit assessment scene" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7353909f-46bc-49d1-9bac-1e29ca026da6" name="Teacher" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="221661af-f511-43d0-adbf-0fb2a3946998" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0c2a72e1-79fd-4807-9ea7-087aa5355701" name="Edit assessment scene" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="0f2a6289-02fb-427c-aa71-4604fb292584" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="cd3e653d-c780-4d87-9817-7e026edb4960" />
+          </association>
+          <association Id="dd1cb946-5001-41ef-a6d7-cffd65012980" isDerived="false" sourceEndRoleName="Teacher" targetEndRoleName="Delete assessment scene" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="4ad72bd3-fd62-4a37-8c08-2875bce2c813" LastKnownName="Delete assessment scene" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bcd49f3b-5ea2-4dd0-aa68-a6152ea89b0f" name="Teacher" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4dfbccc1-f97d-4b2c-b748-a4246f751c3e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e22845c5-4018-420f-8587-382de22ac62f" name="Delete assessment scene" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="02d1dfe3-4b44-4733-b7d0-bd51bf76acfe" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a6135ed0-15ba-4e64-a9d5-cbaf9eb4c4bc" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="71f3bd87-c842-45c7-99ba-ff1a53348059" name="Create assessment scene" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="91b1e047-bd77-4349-ba45-af16b205c5b8" />
+        <suppliersInternal>
+          <dependency Id="96bab2fc-3df4-4071-8fd6-3e1a8daaebc5">
+            <useCaseMoniker Id="03d93d0b-9d6c-4314-bdd1-425e231968d2" LastKnownName="Create assessment question" />
+            <elementDefinition Id="f99f49d0-b1a8-4593-9ca0-e7ea5b1e7559" />
+          </dependency>
+          <dependency Id="8c0ce245-9c20-4790-bea7-591f807bbcbb">
+            <useCaseMoniker Id="2710137a-4037-45c9-bf2a-39385daf0eb5" LastKnownName="Edit assessment question" />
+            <elementDefinition Id="f56550be-173a-4498-ae21-d72426e74512" />
+          </dependency>
+          <dependency Id="b98ee921-0b00-482e-8588-2e3f14b92330">
+            <useCaseMoniker Id="43cc6e44-7bd0-452d-9fb3-c4d2ef89a6eb" LastKnownName="Delete assessment question" />
+            <elementDefinition Id="2e0fe31c-0961-4216-a91d-10f85861630d" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="03d93d0b-9d6c-4314-bdd1-425e231968d2" name="Create assessment question" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="55dc3670-82b5-4059-9d6a-1739407d6fe7" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="38212d85-a735-4158-b206-031741597771" name="Edit assessment scene" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="37e6c4e4-0a16-4d07-95e3-b41f314e513e" />
+        <extendedCases>
+          <extend Id="c4e3d8a9-89e9-471d-936d-db13302ae48e">
+            <useCaseMoniker Id="71f3bd87-c842-45c7-99ba-ff1a53348059" LastKnownName="Create assessment scene" />
+            <elementDefinition Id="bbaa6e4a-c07f-4877-86ca-920adb99732c" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="2710137a-4037-45c9-bf2a-39385daf0eb5" name="Edit assessment question" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b77d9b2c-d0f4-4f6a-a594-eb1d3b7f785b" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="43cc6e44-7bd0-452d-9fb3-c4d2ef89a6eb" name="Delete assessment question" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e39061f8-63b1-49b2-bdc3-835bc10b7e76" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="4ad72bd3-fd62-4a37-8c08-2875bce2c813" name="Delete assessment scene" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2b88b003-a1b2-40a7-8549-e3e01d62112f" />
+        <suppliersInternal>
+          <dependency Id="74fc3ddd-2fd7-496b-a531-6b890bbec9fd">
+            <useCaseMoniker Id="43cc6e44-7bd0-452d-9fb3-c4d2ef89a6eb" LastKnownName="Delete assessment question" />
+            <elementDefinition Id="b90abc0a-83ae-40ce-9754-9544c1540f51" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="2fb6c5c2-366f-4910-8619-9db6397a2af4" name="VCS.Modelling">
+    <elementDefinition Id="3026f59e-7806-4361-9908-c778219bdf5e" />
+    <profileInstances>
+      <packageHasProfileInstances Id="cf3ea703-44ed-4120-95a7-40b36543f854">
+        <profileInstance Id="78bd7c82-dfe2-48ff-a2dc-639494426ca9" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="09784b6b-11bf-4d84-81d4-f8982007b168">
+        <profileInstance Id="bac8ae56-7d43-472f-b7db-873ba596fcd5" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

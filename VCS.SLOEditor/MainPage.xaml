@@ -1,0 +1,15 @@
+﻿<UserControl xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"  x:Class="VCS.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+    xmlns:local="clr-namespace:VCS"
+    mc:Ignorable="d"
+    d:DesignHeight="600" d:DesignWidth="600">
+    <StackPanel x:Name="LayoutRoot" Background="#C7D8FA" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Grid Name="MainPanel">
+            <navigation:Frame Name="MainFrame" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Source="/Pages/StartPage.xaml"></navigation:Frame>
+        </Grid>
+    </StackPanel>
+</UserControl>

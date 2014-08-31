@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{06f23221-19dc-4f7a-93f4-11bc0102f810}</ProjectGuid>
+    <ArchitectureToolsVersion>2.0.0.0</ArchitectureToolsVersion>
+    <Name>VCS.Modelling</Name>
+    <RootNamespace>VCS.Modelling</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="false" />
+  <ItemGroup>
+    <Content Include="Categorization\Preprocess.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Categorization\Preprocess.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Categorization\Preprocess.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="Categorization\SuggestCategory.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Categorization\SuggestCategory.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Categorization\SuggestCategory.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="CS2SLO\Process with categorization.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="CS2SLO\Process with categorization.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>CS2SLO\Process with categorization.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="SLO Editor\SLO-e.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SLO Editor\SLO-e.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SLO Editor\SLO-e.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="SLO Player\Play assessment scene.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SLO Player\Play assessment scene.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SLO Player\Play assessment scene.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SLO Player\Play dialog scene.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SLO Player\Play dialog scene.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SLO Player\Play dialog scene.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SLO Player\Play Storyboard.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SLO Player\Play Storyboard.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SLO Player\Play Storyboard.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SLO Player\SLO Player assessment use cases.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SLO Player\SLO Player assessment use cases.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SLO Player\SLO Player assessment use cases.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="SLO Player\SLO Player dialog scenes.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SLO Player\SLO Player dialog scenes.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SLO Player\SLO Player dialog scenes.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="SLO Player\SLO Player general.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SLO Player\SLO Player general.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SLO Player\SLO Player general.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="VCSCreator\Create SLO from Collaborative session.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="VCSCreator\Create SLO from Collaborative session.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>VCSCreator\Create SLO from Collaborative session.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="VCSCreator\VCS Creator use cases.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="VCSCreator\VCS Creator use cases.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>VCSCreator\VCS Creator use cases.usecasediagram</DependentUpon>
+    </Content>
+    <Folder Include="ModelDefinition\" />
+    <Content Include="ModelDefinition\VCS.Modelling.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Folder Include="Categorization" />
+    <Folder Include="CS2SLO" />
+    <Folder Include="VCSCreator" />
+    <Folder Include="SLO Player" />
+    <Folder Include="SLO Editor" />
+  </ItemGroup>
+</Project>
